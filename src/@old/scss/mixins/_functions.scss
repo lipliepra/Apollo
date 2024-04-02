@@ -1,0 +1,49 @@
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@function colorOpacity($name, $opacity) {
+  @return rgba(var(#{unquote($name)}), $opacity);
+}
+
+@function hexColorOpacity($name, $opacity) {
+  @return rgba($name, $opacity);
+}
+
+@function colorDarken($name, $percent: false) {
+  $var: unquote($name);
+  $val: '#{$percent}%';
+
+  @if $percent {
+    @return hsl(var(#{$var}--h), var(#{$var}--s), calc(var(#{$var}--l) - #{$val}));
+  } @else {
+    @return var(#{$var});
+  }
+}
+
+@function colorLighten($name, $percent: false) {
+  $var: unquote($name);
+  $val: '#{$percent}%';
+
+  @if $percent {
+    @return hsl(var(#{$var}--h), var(#{$var}--s), calc(var(#{$var}--l) + #{$val}));
+  } @else {
+    @return var(#{$var});
+  }
+}
+
+@function brandDark($color) {
+  @return hsl(hue($color) - 0, saturation($color) - 2, lightness($color) - 10);
+}
+
+@function brandLight($color) {
+  @return hsl(hue($color) + 0, saturation($color) - 10, 93%);
+}

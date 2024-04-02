@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "jsx": "react-jsx",
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "noImplicitReturns": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "declaration": true,
+        "baseUrl": "./",
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "typeRoots": [
+            "./src/@types",
+            "./node_modules/@types"
+        ],
+        "types": [
+            "node"
+        ]
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "./src/stories"
+    ]
+}

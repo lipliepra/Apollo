@@ -1,0 +1,13 @@
+@import '../../scss/mixins';
+
+.apollo-sanitized__skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &-item {
+        @include skeleton-bar();
+        min-height: 18px;
+        width: 100%;
+    }
+}

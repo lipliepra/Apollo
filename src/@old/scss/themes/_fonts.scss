@@ -1,0 +1,29 @@
+@import '../mixins/typography';
+
+$fontsGilroy: (
+        ('Medium', normal, normal),
+        ('Bold', bold, normal),
+);
+
+$fontsKoplok: (
+        ('Regular', normal, normal),
+);
+
+$fontsInter: (
+        ('Regular', normal, normal),
+        ('Medium', 500, normal),
+        ('SemiBold', 600, normal),
+        ('Bold', bold, normal),
+);
+
+@each $font, $weight, $style in $fontsGilroy {
+    @include font-face('Gilroy', 'apollo/assets/fonts/Gilroy/Gilroy-#{$font}', $weight, $style);
+}
+
+@each $font, $weight, $style in $fontsKoplok {
+    @include font-face('Koplok', 'apollo/assets/fonts/Koplok/Koplok-#{$font}', $weight, $style);
+}
+
+@each $font, $weight, $style in $fontsInter {
+    @include font-face('Inter', 'apollo/assets/fonts/Inter/Inter-#{$font}', $weight, $style);
+}

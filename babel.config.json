@@ -1,0 +1,19 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        [
+            "transform-imports",
+            {
+                "lodash": {
+                    "preventFullImport": true
+                },
+                "date-fns": {
+                    "preventFullImport": true
+                }
+            }
+        ]
+    ]
+}

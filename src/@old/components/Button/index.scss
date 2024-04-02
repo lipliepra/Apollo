@@ -1,0 +1,215 @@
+@import '../../scss/mixins';
+
+.apollo-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-radius: $base-border-radius;
+    text-align: center;
+    align-content: center;
+    user-select: none;
+    touch-action: manipulation;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover, &:focus-visible {
+        outline: none;
+    }
+
+    // sizes
+    &_sm {
+        @include fs($fs-label, var(--apollo-font-color-primary));
+        padding: 4px 10px;
+    }
+
+    &_md {
+        @include fs($fs-button);
+        padding: 5px 10px;
+    }
+
+    &_lg {
+        @include fs($fs-button);
+        padding: 7px 10px;
+    }
+
+    // patterns
+    &_branded {
+        color: var(--apollo-font-color-alternative);
+        background-color: var(--apollo-brand);
+        border-color: var(--apollo-brand);
+
+        &:hover {
+            background-color: var(--apollo-brand-dark);
+            border-color: var(--apollo-brand-dark);
+        }
+
+        .apollo-icon {
+            fill: var(--apollo-icon-color-alternative);
+        }
+    }
+
+    &_common {
+        color: var(--apollo-font-color-primary);
+        background-color: var(--apollo-background-color-secondary);
+        border-color: var(--apollo-border-color-primary);
+
+        &:hover {
+            background-color: var(--apollo-color-grey-1);
+            border-color: var(--apollo-border-color-primary);
+        }
+    }
+
+    &_primary {
+        color: var(--apollo-font-color-alternative);
+        background-color: var(--apollo-color-grey-7);
+        border-color: var(--apollo-color-grey-7);
+
+        &:hover {
+            background-color: var(--apollo-color-grey-6);
+            border-color: var(--apollo-color-grey-8);
+        }
+
+        .apollo-icon {
+            fill: var(--apollo-icon-color-alternative);
+        }
+    }
+
+    &_secondary {
+        background-color: var(--apollo-color-grey-5);
+        border-color: var(--apollo-color-grey-5);
+        color: var(--apollo-font-color-alternative);
+
+        &:hover {
+            background-color: var(--apollo-color-grey-4);
+            border-color: var(--apollo-color-grey-5);
+        }
+
+        .apollo-icon {
+            fill: var(--apollo-icon-color-alternative);
+        }
+    }
+
+    &_positive {
+        background-color: var(--apollo-status-background-color-positive);
+        border-color: var(--apollo-status-color-positive);
+        color: var(--apollo-status-color-positive);
+
+        .apollo-icon {
+            fill: var(--apollo-status-color-positive);
+        }
+    }
+
+    &_negative {
+        background-color: var(--apollo-status-background-color-negative);
+        border-color: var(--apollo-status-color-negative);
+        color: var(--apollo-status-color-negative);
+
+        .apollo-icon {
+            fill: var(--apollo-status-color-negative);
+        }
+    }
+
+    &_warning {
+        background-color: var(--apollo-status-background-color-warning);
+        border-color: var(--apollo-status-color-warning);
+        color: var(--apollo-status-color-warning);
+
+        .apollo-icon {
+            fill: var(--apollo-status-color-warning);
+        }
+    }
+
+    &_like-link,
+    &_like-icon {
+        padding: 0;
+        border: none;
+        background: none;
+
+        color: var(--apollo-brand);
+
+        .apollo-icon {
+            fill: var(--apollo-brand)
+        }
+
+        &:hover {
+            color: var(--apollo-brand-dark);
+
+            .apollo-icon {
+                fill: var(--apollo-brand-dark)
+            }
+        }
+
+        &:focus-visible {
+            color: var(--apollo-brand);
+
+            .apollo-icon {
+                fill: var(--apollo-brand);
+            }
+        }
+
+        &:active {
+            color: var(--apollo-brand-dark);
+
+            .apollo-icon {
+                fill: var(--apollo-brand-dark);
+            }
+        }
+    }
+
+    // states
+    &_full-width {
+        width: 100%;
+    }
+
+    &_loading {
+        .apollo-button__icon:not(.apollo-button__icon_prefix) {
+            animation: loaderSpinner 0.7s linear infinite;
+
+            & path[data-id='loader-sub-sector'] {
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &_disabled, &_disabled:hover, &_disabled.apollo-button_branded, &_disabled.apollo-button_branded:hover {
+        border-color: var(--apollo-border-color-secondary) !important;
+        background-color: var(--apollo-border-color-secondary) !important;
+        color: var(--apollo-font-color-disabled) !important;
+        cursor: default !important;
+
+        .apollo-icon {
+            fill: var(--apollo-icon-color-tertiary) !important;
+        }
+    }
+
+    &__skeleton {
+        @include skeleton-bar;
+        width: 100%;
+
+        &_sm {
+            min-height: 36px;
+        }
+
+        &_md {
+            min-height: 38px;
+        }
+
+        &_lg {
+            min-height: 42px;
+        }
+
+        &_full-width {
+            width: 100%;
+        }
+    }
+}
+
+@keyframes loaderSpinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
