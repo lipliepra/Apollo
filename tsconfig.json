@@ -5,12 +5,12 @@
         "jsx": "react-jsx",
         "outDir": "./dist/",
         "noImplicitAny": true,
-        "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "noImplicitReturns": true,
         "moduleResolution": "node",
         "sourceMap": true,
         "declaration": true,
+        "esModuleInterop": true,
         "baseUrl": "./",
         "lib": [
             "es2015",
@@ -23,11 +23,6 @@
         "types": [
             "node"
         ]
-    },
-    "ts-node": {
-        "compilerOptions": {
-            "module": "CommonJS"
-        }
     },
     "include": [
         "src"

@@ -1,26 +1,27 @@
-import React, {
+import {
     useLayoutEffect,
     useState,
 } from 'react';
 import { Router as DefaultRouter } from 'react-router-dom';
 
-import { CFC } from '../../types';
-import { navigation } from '../../../common/utils/navigation';
+import { type CFC } from '../../types';
+import { navigator } from '../../utils/navigator';
 
 export const Router: CFC = ({ children }) => {
     const [state, setState] = useState({
-        action: navigation.action,
-        location: navigation.location,
+        action: navigator.action,
+        location: navigator.location,
     });
 
-    useLayoutEffect(() => navigation.listen(setState), []);
+    useLayoutEffect(() => navigator.listen(setState), []);
 
     return (
         <DefaultRouter
-            children={children}
             location={state.location}
             navigationType={state.action}
-            navigator={navigation}
-        />
+            navigator={navigator}
+        >
+            {children}
+        </DefaultRouter>
     );
 };
