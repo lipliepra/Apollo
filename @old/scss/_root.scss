@@ -1,0 +1,166 @@
+@import 'themes';
+@import 'brandes';
+
+:root {
+    --apollo-brand: #{$orange-brand};
+    --apollo-brand-dark: #{$orange-brand-dark};
+    --apollo-brand-light: #{$orange-brand-light};
+
+    // GREY
+    --apollo-color-grey-1: #{$color-grey-1};
+    --apollo-color-grey-2: #{$color-grey-2};
+    --apollo-color-grey-3: #{$color-grey-3};
+    --apollo-color-grey-4: #{$color-grey-4};
+    --apollo-color-grey-5: #{$color-grey-5};
+    --apollo-color-grey-6: #{$color-grey-6};
+    --apollo-color-grey-7: #{$color-grey-7};
+    --apollo-color-grey-8: #{$color-grey-8};
+    --apollo-color-grey-9: #{$color-grey-9};
+    --apollo-color-grey-10: #{$color-grey-10};
+
+    // RED
+    --apollo-color-red-1: #{$color-red-1};
+    --apollo-color-red-2: #{$color-red-2};
+    --apollo-color-red-3: #{$color-red-3};
+    --apollo-color-red-4: #{$color-red-4};
+    --apollo-color-red-5: #{$color-red-5};
+    --apollo-color-red-6: #{$color-red-6};
+    --apollo-color-red-7: #{$color-red-7};
+    --apollo-color-red-8: #{$color-red-8};
+    --apollo-color-red-9: #{$color-red-9};
+    --apollo-color-red-10: #{$color-red-10};
+
+    // ORANGE
+    --apollo-color-orange-1: #{$color-orange-1};
+    --apollo-color-orange-2: #{$color-orange-2};
+    --apollo-color-orange-3: #{$color-orange-3};
+    --apollo-color-orange-4: #{$color-orange-4};
+    --apollo-color-orange-5: #{$color-orange-5};
+    --apollo-color-orange-6: #{$color-orange-6};
+    --apollo-color-orange-7: #{$color-orange-7};
+    --apollo-color-orange-8: #{$color-orange-8};
+    --apollo-color-orange-9: #{$color-orange-9};
+    --apollo-color-orange-10: #{$color-orange-10};
+
+    // PURPLE
+    --apollo-color-purple-1: #{$color-purple-1};
+    --apollo-color-purple-2: #{$color-purple-2};
+    --apollo-color-purple-3: #{$color-purple-3};
+    --apollo-color-purple-4: #{$color-purple-4};
+    --apollo-color-purple-5: #{$color-purple-5};
+    --apollo-color-purple-6: #{$color-purple-6};
+    --apollo-color-purple-7: #{$color-purple-7};
+    --apollo-color-purple-8: #{$color-purple-8};
+    --apollo-color-purple-9: #{$color-purple-9};
+    --apollo-color-purple-10: #{$color-purple-10};
+
+    // BLUE
+    --apollo-color-blue-1: #{$color-blue-1};
+    --apollo-color-blue-2: #{$color-blue-2};
+    --apollo-color-blue-3: #{$color-blue-3};
+    --apollo-color-blue-4: #{$color-blue-4};
+    --apollo-color-blue-5: #{$color-blue-5};
+    --apollo-color-blue-6: #{$color-blue-6};
+    --apollo-color-blue-7: #{$color-blue-7};
+    --apollo-color-blue-8: #{$color-blue-8};
+    --apollo-color-blue-9: #{$color-blue-9};
+    --apollo-color-blue-10: #{$color-blue-10};
+
+    // GREEN
+    --apollo-color-green-1: #{$color-green-1};
+    --apollo-color-green-2: #{$color-green-2};
+    --apollo-color-green-3: #{$color-green-3};
+    --apollo-color-green-4: #{$color-green-4};
+    --apollo-color-green-5: #{$color-green-5};
+    --apollo-color-green-6: #{$color-green-6};
+    --apollo-color-green-7: #{$color-green-7};
+    --apollo-color-green-8: #{$color-green-8};
+    --apollo-color-green-9: #{$color-green-9};
+    --apollo-color-green-10: #{$color-green-10};
+
+    // YELLOW
+    --apollo-color-yellow-1: #{$color-yellow-1};
+    --apollo-color-yellow-2: #{$color-yellow-2};
+    --apollo-color-yellow-3: #{$color-yellow-3};
+    --apollo-color-yellow-4: #{$color-yellow-4};
+    --apollo-color-yellow-5: #{$color-yellow-5};
+    --apollo-color-yellow-6: #{$color-yellow-6};
+    --apollo-color-yellow-7: #{$color-yellow-7};
+    --apollo-color-yellow-8: #{$color-yellow-8};
+    --apollo-color-yellow-9: #{$color-yellow-9};
+    --apollo-color-yellow-10: #{$color-yellow-10};
+
+    --apollo-color-magenta-1: #{$color-magenta-1};
+    --apollo-color-magenta-2: #{$color-magenta-2};
+    --apollo-color-magenta-3: #{$color-magenta-3};
+    --apollo-color-magenta-4: #{$color-magenta-4};
+    --apollo-color-magenta-5: #{$color-magenta-5};
+    --apollo-color-magenta-6: #{$color-magenta-6};
+    --apollo-color-magenta-7: #{$color-magenta-7};
+    --apollo-color-magenta-8: #{$color-magenta-8};
+    --apollo-color-magenta-9: #{$color-magenta-9};
+    --apollo-color-magenta-10: #{$color-magenta-10};
+
+    // Text
+    --apollo-font-color-primary: #{$apollo-font-color-primary};
+    --apollo-font-color-secondary: #{$apollo-font-color-secondary};
+    --apollo-font-color-tertiary: #{$apollo-font-color-tertiary};
+    --apollo-font-color-disabled: #{$apollo-font-color-disabled};
+    --apollo-font-color-alternative: #{$apollo-font-color-alternative};
+    --apollo-font-color-link: #{$apollo-font-color-link};
+
+    // Background
+    --apollo-background-color-primary: #{$apollo-background-color-primary};
+    --apollo-background-color-secondary: #{$apollo-background-color-secondary};
+    --apollo-background-color-tertiary: #{$apollo-background-color-tertiary};
+    --apollo-background-color-disabled: #{$apollo-background-color-disabled};
+
+    // Icon
+    --apollo-icon-color-primary: #{$apollo-icon-color-primary};
+    --apollo-icon-color-secondary: #{$apollo-icon-color-secondary};
+    --apollo-icon-color-tertiary: #{$apollo-icon-color-tertiary};
+    --apollo-icon-color-alternative: #{$apollo-icon-color-alternative};
+
+    // Border
+    --apollo-border-color-primary: #{$apollo-border-color-primary};
+    --apollo-border-color-secondary: #{$apollo-border-color-secondary};
+    --apollo-border-color-tertiary: #{$apollo-border-color-tertiary};
+
+    // Divider
+    --apollo-divider-color-primary: #{$apollo-divider-color-primary};
+    --apollo-divider-color-secondary: #{$apollo-divider-color-secondary};
+
+    // Status
+    --apollo-status-color-negative: #{$apollo-status-color-negative};
+    --apollo-status-background-color-negative: #{hexColorOpacity($apollo-status-color-negative, .3)};
+    --apollo-status-color-positive: #{$apollo-status-color-positive};
+    --apollo-status-background-color-positive: #{hexColorOpacity($apollo-status-color-positive, .3)};
+    --apollo-status-color-warning: #{$apollo-status-color-warning};
+    --apollo-status-background-color-warning: #{hexColorOpacity($apollo-status-color-warning, .3)};
+    --apollo-status-color-progress: #{$apollo-status-color-progress};
+    --apollo-status-background-color-progress: #{hexColorOpacity($apollo-status-color-progress, .3)};
+
+    // Elevation
+    --apollo-elevation-color-primary: #{hexColorOpacity($color-grey-10, .20)};
+
+    // Overlay
+    --apollo-overlay-color-primary: #{hexColorOpacity($color-grey-10, .80)};
+
+    @if $colors {
+        @each $key, $value in $colors {
+            --apollo-#{$key}--rgb: #{hexToRGB($value)};
+        }
+    }
+}
+
+@each $brand, $list in $apollo-brandes {
+    .#{$brand} {
+        @each $key, $value in $list {
+            --apollo-#{$key}: #{$value};
+            --apollo-#{$key}--rgb: #{hexToRGB($value)};
+            --apollo-#{$key}--h: #{hue($value)};
+            --apollo-#{$key}--s: #{saturation($value)};
+            --apollo-#{$key}--l: #{lightness($value)};
+        }
+    }
+}

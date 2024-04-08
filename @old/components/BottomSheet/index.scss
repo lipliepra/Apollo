@@ -1,0 +1,64 @@
+@import '../../scss/mixins';
+
+.apollo-bottom-sheet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--apollo-overlay-color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 500;
+
+    &__backdrop {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__container {
+        @include border-top-radius(6px);
+        width: 100%;
+        background-color: var(--apollo-background-color-secondary);
+        z-index: 10;
+        padding: 0 4px 20px;
+    }
+
+    &__header {
+        height: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 36px;
+            height: 4px;
+            background-color: var(--apollo-divider-color-primary);
+            border-radius: 25px;
+        }
+    }
+
+    &__content {
+        @include custom-scrollbar;
+        overflow: auto;
+        max-height: calc(100vh - 140px);
+        min-height: 40vh;
+        height: auto;
+        position: relative;
+        padding: 0 16px 0;
+    }
+
+    @include media($mobile-breakpoint) {
+        &__content {
+            min-height: calc(100vh - 100px);
+        }
+    }
+}
