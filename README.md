@@ -1,1 +1,1 @@
-# Apollo - дизайн систма для Daily.Story
+# Apollo - дизайн система для Daily.Story

@@ -1,9 +1,12 @@
 {
     "name": "@d.story/apollo-ui",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "UI-kit for Daily.Story",
     "main": "./dist/index.js",
-    "keywords": [],
+    "keywords": [
+        "ui-kit",
+        "react"
+    ],
     "author": "lipliepra",
     "license": "ISC",
     "scripts": {
