@@ -9,3 +9,4 @@ node-modules
 webpack.config.ts
 webpack
 config/eslint
+dist

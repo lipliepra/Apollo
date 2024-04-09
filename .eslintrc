@@ -72,25 +72,6 @@
             }
         ],
         "object-property-newline": "off",
-        //        "object-property-newline-custom": [
-        //            "error",
-        //            {
-        //                "minProperties": 2,
-        //                "consistent": true,
-        //                "multiline": false
-        //            }
-        //        ],
-        //        "array-bracket-newline-custom": [
-        //            "error",
-        //            {
-        //                "ArrayExpression": {
-        //                    "minItems": 2
-        //                },
-        //                "ArrayPattern": {
-        //                    "minItems": 4
-        //                }
-        //            }
-        //        ],
         "array-element-newline": "off",
         // stylistic replaced
         "multiline-ternary": "off",
