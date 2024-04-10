@@ -22,6 +22,7 @@
         "@babel/preset-react": "7.22.5",
         "@babel/preset-typescript": "7.22.5",
         "@stylistic/eslint-plugin": "1.5.0",
+        "@svgr/webpack": "8.1.0",
         "@testing-library/jest-dom": "5.16.5",
         "@testing-library/react": "14.0.0",
         "@types/jest": "29.5.2",
