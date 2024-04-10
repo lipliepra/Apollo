@@ -1,3 +1,4 @@
+export { ICONS } from './assets';
 export { RuntimeStatuses } from './enums';
 export type {
     CFC,
