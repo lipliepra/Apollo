@@ -11,7 +11,7 @@
     "license": "ISC",
     "scripts": {
         "build": "webpack",
-        "deploy": "npm publish --access=public",
+        "deploy": "webpack && npm version patch && npm publish",
         "startStory": "start-storybook -p 6006",
         "buildStory": "build-storybook"
     },
