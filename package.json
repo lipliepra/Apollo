@@ -5,7 +5,14 @@
     "main": "./dist/index.js",
     "keywords": [
         "ui-kit",
-        "react"
+        "react",
+        "webpack",
+        "components",
+        "scss",
+        "icons",
+        "hooks",
+        "utils",
+        "types"
     ],
     "author": "lipliepra",
     "license": "ISC",
