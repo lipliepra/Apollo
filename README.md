@@ -1,1 +1,1 @@
-# Apollo-UI - дизайн система для Daily.Story
+# Apollo - дизайн система для Daily.Story
