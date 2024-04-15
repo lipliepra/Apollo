@@ -1,5 +1,6 @@
 export { ICONS } from './assets';
 export { RuntimeStatuses } from './enums';
+export { useAdaptive } from './hooks/useAdaptive';
 export type {
     CFC,
     TFunc,
