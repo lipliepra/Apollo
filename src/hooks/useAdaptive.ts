@@ -17,12 +17,18 @@ interface IUseAdaptive {
 }
 
 /**
- * Хук useAdaptive определяет тип адаптивности устройства:
+ * Хук useAdaptive позволяет определить тип адаптивности устройства.
  *
- * - `isMobile` - устройство является мобильным.
- * - `isTablet` - устройство является планшетным.
- * - `isAdaptive` - устройство является адаптивным (мобильным или планшетным).
- * */
+ * Возвращает объект с тремя свойствами:
+ *
+ * - isMobile: указывает, является ли устройство мобильным.
+ * - isTablet: указывает, является ли устройство планшетным.
+ * - isAdaptive: указывает, является ли устройство адаптивным (мобильным или планшетным).
+ *
+ * Принцип работы:
+ *
+ * - Хук отслеживает изменения размеров окна и автоматически обновляет состояния адаптивности.
+ */
 export const useAdaptive: TFunc<[], IUseAdaptive> = () => {
     const isMobileDefault = window.innerWidth <= MOBILE_BREAKPOINT;
     const isTabletDefault = window.innerWidth <= DESKTOP_BREAKPOINT && window.innerWidth > MOBILE_BREAKPOINT;

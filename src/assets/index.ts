@@ -49,6 +49,15 @@ import User from './icons/svg/user.svg';
 import UserCircle from './icons/svg/userCircle.svg';
 import Widget from './icons/svg/widget.svg';
 
+/**
+ * ICONS - Объект, содержащий иконки для использования в приложении или компонентах.
+ *
+ * - Каждое свойство объекта представляет собой иконку, доступную по имени.
+ *
+ * - Иконки могут быть использованы для отображения различных элементов интерфейса.
+ *
+ * - Иконки необходимо использовать в компоненте Icon, передавая их в пропе path.
+ */
 export const ICONS = {
     AddNew,
     Alarm,
