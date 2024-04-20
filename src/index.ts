@@ -1,6 +1,7 @@
 export { ICONS } from './assets';
 export { RuntimeStatuses } from './enums';
 export { useAdaptive } from './hooks/useAdaptive';
+export { useBase64ImageUrlByFile } from './hooks/useBase64ImageUrlByFile';
 export { useClickOutside } from './hooks/useClickOutside';
 export { useDisableScroll } from './hooks/useDisableScroll';
 export { useInterval } from './hooks/useInterval';
@@ -15,6 +16,7 @@ export type {
     TOptions,
     TRef,
     TSearchOptions,
+    TSetAction,
     TSetTimeout,
     TStatus,
     TUnkObject,
