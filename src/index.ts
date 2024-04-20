@@ -4,6 +4,7 @@ export { useAdaptive } from './hooks/useAdaptive';
 export { useClickOutside } from './hooks/useClickOutside';
 export { useDisableScroll } from './hooks/useDisableScroll';
 export { useInterval } from './hooks/useInterval';
+export { useLocalStorage } from './hooks/useLocalStorage';
 export type {
     CFC,
     TFunc,
