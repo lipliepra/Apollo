@@ -1,7 +1,9 @@
 import {
+    type Dispatch,
     type FC,
     type PropsWithChildren,
     type RefObject,
+    type SetStateAction,
     type SVGProps,
 } from 'react';
 
@@ -16,6 +18,9 @@ export type TFunc<Args extends Array<unknown> = Array<never>, Return = void> = (
 
 /** Ссылка на DOM-элемент */
 export type TRef<T = HTMLDivElement> = TNullable<RefObject<T>>;
+
+/** Функция обновления состояния */
+export type TSetAction<T = unknown> = Dispatch<SetStateAction<T>>;
 
 /** Возвращаемое значение функции setTimeout */
 export type TSetTimeout = ReturnType<typeof setTimeout>;
