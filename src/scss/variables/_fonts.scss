@@ -1,0 +1,28 @@
+@use '../mixins/fonts';
+
+$fonts: (
+    Gilroy: (
+            ('Medium', normal),
+            ('Bold', bold),
+    ),
+    Koplok: (
+            ('Regular', normal),
+    ),
+    Inter: (
+            ('Regular', normal),
+            ('Medium', 500),
+            ('SemiBold', 600),
+            ('Bold', bold),
+    )
+);
+
+$font-family-default: 'Helvetica Neue', sans-serif !default;
+$font-family-secondary: 'Inter';
+$font-family-tertiary: 'Koplok';
+$font-family-primary: 'Gilroy', $font-family-secondary, $font-family-default;
+
+@each $font, $list in $fonts {
+    @each $type, $weight in $list {
+        @include fonts.font-face(#{$font}, 'src/assets/fonts/#{$font}/#{$font}-#{$type}', $weight);
+    }
+}
