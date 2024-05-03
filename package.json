@@ -19,7 +19,7 @@
     "scripts": {
         "build": "webpack && npm run build:scss",
         "build:scss": "sass src/scss/index.scss dist/index.css",
-        "deploy": "webpack && npm version patch && npm publish",
+        "deploy": "npm run build && npm version patch && npm publish",
         "start:story": "start-storybook -p 6006",
         "build:story": "build-storybook"
     },
