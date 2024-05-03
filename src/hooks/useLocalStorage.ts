@@ -19,6 +19,5 @@ const subscribe = (onChange: TFunc) => {
  * Принцип работы:
  * - Возвращает значение, хранящееся в localStorage по указанному ключу.
  */
-export const useLocalStorage = (key: string) => useSyncExternalStore(
-    subscribe.bind(null, key), () => localStorage.getItem(key),
-);
+export const useLocalStorage: TFunc<[string], unknown> = (key: string) => (
+    useSyncExternalStore(subscribe, () => localStorage.getItem(key)));
