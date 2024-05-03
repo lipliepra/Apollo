@@ -1,0 +1,22 @@
+@use './variables/fonts';
+@use './mixins/utils';
+
+/** Default parameters */
+:root {
+    /** Font family */
+    --apollo-font-family-primary: #{fonts.$font-family-primary};
+    --apollo-font-family-secondary: #{fonts.$font-family-secondary};
+    --apollo-font-family-tertiary: #{fonts.$font-family-tertiary};
+    --apollo-font-family-default: #{fonts.$font-family-default};
+
+    /** Elevation */
+    --apollo-elevation: 1px 1px 4px 1px var(--apollo-elevation-color-primary);
+
+    /** Border-radius */
+    --apollo-border-radius: 8px;
+
+    /** Media breakpoints */
+    --apollo-desktop-breakpoint: 1224;
+
+    --apollo-mobile-breakpoint: 768;
+}
