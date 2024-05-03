@@ -1,0 +1,101 @@
+@mixin helper-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding: 0;
+    margin: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+
+    &::before,
+    &::after {
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+    }
+}
+
+@keyframes skeleton-animation {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@mixin skeleton {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--apollo-border-radius);
+    background-color: var(--apollo-skeleton-color-primary);
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: 100%;
+        background-image: linear-gradient(90deg, var(--apollo-skeleton-color-primary) 0, var(--apollo-skeleton-color-skeleton) 40px, var(--apollo-skeleton-color-primary) 80px);
+        animation: skeleton-animation 1s infinite linear;
+    }
+}
+
+@mixin custom-scrollbar {
+    cursor: default;
+
+    &::-webkit-scrollbar {
+        display: none;
+        -webkit-appearance: none;
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        display: none;
+        background-color: var(--apollo-background-color-secondary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        display: none;
+        background: var(--apollo-border-color-secondary);
+        border-radius: 4px;
+    }
+}
+
+@mixin textEllipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: inherit;
+    white-space: nowrap;
+}
+
+@mixin border-top-radius($radius: var(--apollo-border-radius)) {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin border-right-radius($radius: var(--apollo-border-radius)) {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius: var(--apollo-border-radius)) {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+@mixin border-left-radius($radius: var(--apollo-border-radius)) {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
