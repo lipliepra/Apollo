@@ -1,0 +1,12 @@
+@use '../../variables/colors';
+
+$magenta-brand: colors.$color-magenta-6;
+$magenta-brand-dark: colors.$color-magenta-7;
+$magenta-brand-light: colors.$color-magenta-4;
+
+/** Magenta brand */
+:root[data-brand='magenta'] {
+    --apollo-brand: #{$magenta-brand};
+    --apollo-brand-dark: #{$magenta-brand-dark};
+    --apollo-brand-light: #{$magenta-brand-light};
+}
