@@ -1,0 +1,60 @@
+@import './mixins/typography';
+@import './variables/typography';
+
+/** Typography */
+.text-h1 {
+    @include text($fs-h1);
+}
+
+.text-h2 {
+    @include text($fs-h2);
+}
+
+.text-h3 {
+    @include text($fs-h3);
+}
+
+.text-h4 {
+    @include text($fs-h4);
+}
+
+.text-h5 {
+    @include text($fs-h5);
+}
+
+.text-body {
+    @include text($fs-body);
+}
+
+.text-button {
+    @include text($fs-button);
+}
+
+.text-label {
+    @include text($fs-label);
+}
+
+.text-helper {
+    @include text($fs-helper);
+}
+
+.text-negative {
+    @include text($fs-negative);
+}
+
+.text-positive {
+    @include text($fs-positive);
+}
+
+.text-warning {
+    @include text($fs-warning);
+}
+
+.text-progress {
+    @include text($fs-progress);
+}
+
+.text-link {
+    @include text($fs-link);
+    text-decoration: underline;
+}

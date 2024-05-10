@@ -17,6 +17,8 @@ export {
     MOBILE_BREAKPOINT,
     NOOP,
 } from './constants';
+/** Components */
+export { Divider } from './components/Divider';
 /** Types */
 export type {
     CFC,

@@ -1,7 +1,7 @@
 import { Configuration } from 'webpack';
 import { buildExternals } from './buildExternals';
 import { buildLoaders } from './buildLoaders';
-import { buildPlugins } from './buildPlugins';
+// import { buildPlugins } from './buildPlugins';
 import { buildResolvers } from './buildResolvers';
 import { IBuildOptions } from './types/types';
 
@@ -20,7 +20,7 @@ export function buildWebpackConfig(options: IBuildOptions): Configuration {
             libraryTarget: 'umd',
             clean: true,
         },
-        plugins: buildPlugins(),
+        // plugins: buildPlugins(),
         resolve: buildResolvers(),
         externals: buildExternals(),
         module: {
