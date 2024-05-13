@@ -19,6 +19,7 @@ export {
 } from './constants';
 /** Components */
 export { Divider } from './components/Divider';
+export { SanitizedHtml } from './components/SanitizedHtml';
 /** Types */
 export type {
     CFC,
