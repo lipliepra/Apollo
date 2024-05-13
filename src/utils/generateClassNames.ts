@@ -11,6 +11,18 @@ export interface IGenerateClassNamesParams {
     className?: string;
 }
 
+/**
+ * Утилита generateClassNames принимает параметры блока, элемента, модификаторов и дополнительного класса,
+ * и генерирует строку с классами в стиле BEM для использования в компонентах.
+ *
+ * @param block - строка, имя блока в методологии BEM.
+ * @param elem - необязательная строка, имя элемента блока в методологии BEM.
+ * @param mods - объект модификаторов блока или элемента, где ключ - имя модификатора,
+ *        а значение - строка, булево значение или undefined.
+ * @param className - дополнительный класс для добавления к результату.
+ *
+ * @returns Строка с классами блока или элемента, включая классы модификаторов.
+ */
 export const generateCLassNames: TFunc<[IGenerateClassNamesParams], string> = ({
     block,
     elem = '',

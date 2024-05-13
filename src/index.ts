@@ -19,6 +19,7 @@ export {
 } from './constants';
 /** Components */
 export { Divider } from './components/Divider';
+export { SanitizedHtml } from './components/SanitizedHtml';
 /** Types */
 export type {
     CFC,
@@ -36,3 +37,4 @@ export type {
 } from './types';
 /** Utils */
 export { generateCLassNames } from './utils/generateClassNames';
+export { lStorage } from './utils/lStorage';
