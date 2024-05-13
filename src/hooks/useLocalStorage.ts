@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from 'react';
 
+import { lStorage } from '../utils/lStorage';
 import { type TFunc } from '../types';
 
 const subscribe = (onChange: TFunc) => {
@@ -20,4 +21,4 @@ const subscribe = (onChange: TFunc) => {
  * - Возвращает значение, хранящееся в localStorage по указанному ключу.
  */
 export const useLocalStorage: TFunc<[string], unknown> = (key: string) => (
-    useSyncExternalStore(subscribe, () => localStorage.getItem(key)));
+    useSyncExternalStore(subscribe, () => lStorage.get(key)));

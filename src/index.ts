@@ -36,3 +36,4 @@ export type {
 } from './types';
 /** Utils */
 export { generateCLassNames } from './utils/generateClassNames';
+export { lStorage } from './utils/lStorage';
