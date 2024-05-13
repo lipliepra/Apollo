@@ -1,0 +1,59 @@
+@use '../../scss/mixins/utils';
+
+.apollo-icon {
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: manipulation;
+    line-height: 1;
+    fill: var(--apollo-icon-color-primary);
+    transition: 0.3s;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+
+    &_active {
+        fill: var(--apollo-brand);
+    }
+
+    &_loading {
+        animation: loaderSpinner 0.7s linear infinite;
+
+        & path[data-id='loader-sub-sector'] {
+            opacity: 0.3;
+        }
+    }
+
+    &_large {
+        width: 26px;
+        height: 26px;
+    }
+
+    &_margin-left {
+        margin-left: 8px;
+    }
+
+    &_margin-right {
+        margin-right: 8px;
+    }
+
+    &__skeleton {
+        @include utils.skeleton();
+        width: 22px;
+        height: 22px;
+
+        &_large {
+            width: 26px;
+            height: 26px;
+        }
+
+        &_margin-left {
+            margin-left: 8px;
+        }
+
+        &_margin-right {
+            margin-right: 8px;
+        }
+    }
+}
