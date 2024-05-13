@@ -18,7 +18,7 @@
     "license": "ISC",
     "scripts": {
         "build": "webpack && npm run build:scss",
-        "build:scss": "sass src/scss/index.scss dist/index.css",
+        "build:scss": "sass src/scss/index.scss dist/css/index.css",
         "deploy": "npm run build && npm version patch && npm publish",
         "story:start": "storybook dev -p 6006",
         "story:build": "storybook build"

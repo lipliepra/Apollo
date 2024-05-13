@@ -1,43 +1,15 @@
 @use './mixins/utils';
 @use './mixins/typography';
 
-/** Skeleton */
-.skeleton {
-    @include utils.skeleton;
-}
-
-@keyframes skeleton-animation {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
 /** Visual effects */
 .visually-hidden {
-    @include utils.helper-visually-hidden;
+    @include utils.helper-visually-hidden();
 }
 
-/** Text */
 .text-ellipsis {
-    @include utils.textEllipsis;
+    @include utils.textEllipsis();
 }
 
-/** Border */
-.btr {
-    @include utils.border-top-radius;
-}
-
-.bbr {
-    @include utils.border-bottom-radius;
-}
-
-.brr {
-    @include utils.border-right-radius;
-}
-
-.blr {
-    @include utils.border-left-radius;
+.skeleton {
+    @include utils.skeleton();
 }
