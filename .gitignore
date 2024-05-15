@@ -6,3 +6,5 @@ dist
 editorConfig.xml
 babel.config.json
 package-lock.json
+
+*storybook.log
