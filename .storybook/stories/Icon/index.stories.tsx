@@ -16,13 +16,18 @@ const meta: Meta<typeof Icon> = {
         path: ICONS.EmptyImage,
         dataTestId: 'dataTestId',
     },
+    argTypes: {
+        path: { control: false },
+        onClick: { control: false },
+        reactRef: { control: false },
+    },
 };
 
 export default meta;
 
 type TStory = StoryObj<typeof Icon>;
 
-export const Component: TStory = {};
+export const Component: TStory = { name: 'Компонент по-умолчанию' };
 
 export const SmallIcons: TStory = {
     name: 'Иконки стандартного размера',
