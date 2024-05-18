@@ -1,7 +1,10 @@
 /** Assets */
 export { ICONS } from './assets';
 /** Enums */
-export { RuntimeStatuses } from './enums';
+export {
+    InfoStatuses,
+    RuntimeStatuses,
+} from './enums';
 /** Hooks */
 export { useAdaptive } from './hooks/useAdaptive';
 export { useBase64ImageUrlByFile } from './hooks/useBase64ImageUrlByFile';
@@ -18,6 +21,7 @@ export {
     NOOP,
 } from './constants';
 /** Components */
+export { Button } from './components/Button';
 export { Divider } from './components/Divider';
 export { Icon } from './components/Icon';
 export { SanitizedHtml } from './components/SanitizedHtml';
@@ -33,7 +37,6 @@ export type {
     TSearchOptions,
     TSetAction,
     TSetTimeout,
-    TStatus,
     TUnkObject,
 } from './types';
 /** Utils */
