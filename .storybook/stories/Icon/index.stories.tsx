@@ -6,8 +6,9 @@ import {
     Icon,
     ICONS,
 } from '../../../src';
+import { IIconWithSkeletonProps } from '../../../src/components/Icon/types';
 
-const meta: Meta<typeof Icon> = {
+const meta: Meta<IIconWithSkeletonProps> = {
     title: 'Components/Icon',
     component: Icon,
     tags: ['autodocs'],
@@ -17,15 +18,18 @@ const meta: Meta<typeof Icon> = {
         dataTestId: 'dataTestId',
     },
     argTypes: {
-        path: { control: false },
-        onClick: { control: false },
+        path: {
+            control: 'select',
+            options: Object.keys(ICONS),
+            mapping: ICONS,
+        },
         reactRef: { control: false },
     },
 };
 
 export default meta;
 
-type TStory = StoryObj<typeof Icon>;
+type TStory = StoryObj<IIconWithSkeletonProps>;
 
 export const Component: TStory = { name: 'Компонент по-умолчанию' };
 
@@ -37,6 +41,7 @@ export const SmallIcons: TStory = {
                 display: 'flex',
                 flexWrap: 'wrap',
                 gap: '16px',
+                maxWidth: '938px',
             }}
         >
             {Object.values(ICONS).map((icon, index) => (
@@ -59,6 +64,7 @@ export const LargeIcons: TStory = {
                 display: 'flex',
                 flexWrap: 'wrap',
                 gap: '16px',
+                maxWidth: '938px',
             }}
         >
             {Object.values(ICONS).map((icon, index) => (

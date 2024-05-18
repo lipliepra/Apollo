@@ -1,0 +1,184 @@
+@use '../../scss/mixins/utils';
+@use '../../scss/variables/typography';
+@import '../../scss/mixins/typography';
+
+.apollo-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-radius: var(--apollo-border-radius);
+    user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+    padding: 4px 10px;
+    transition: 0.3s;
+    @include text(typography.$fs-button);
+
+    &:focus {
+        outline: none;
+    }
+
+    &.apollo-button {
+        // patterns
+        &_primary {
+            background-color: var(--apollo-brand);
+            border-color: var(--apollo-brand);
+
+            &:hover {
+                background-color: var(--apollo-brand);
+                border-color: var(--apollo-brand-dark);
+            }
+
+            &:active {
+                background-color: var(--apollo-brand-dark);
+                border-color: var(--apollo-brand-dark);
+            }
+
+            &:focus-visible {
+                background-color: var(--apollo-brand);
+                border-color: var(--apollo-brand);
+                outline: 1px solid var(--apollo-color-font-alternative);
+                outline-offset: -2px;
+            }
+        }
+
+        &_secondary {
+            color: var(--apollo-color-font-primary);
+            background-color: var(--apollo-color-background-secondary);
+            border-color: var(--apollo-color-border-primary);
+
+            &:hover {
+                background-color: var(--apollo-color-background-primary);
+            }
+
+            &:active {
+                background-color: var(--apollo-color-background-tertiary);
+            }
+
+            &:focus-visible {
+                background-color: var(--apollo-color-background-secondary);
+                border-color: var(--apollo-brand);
+            }
+        }
+
+        &_tertiary {
+            background: none;
+            color: var(--apollo-color-font-link);
+
+            &:hover {
+                color: var(--apollo-brand);
+
+                .apollo-button__icon {
+                    fill: var(--apollo-brand);
+                }
+            }
+
+            &:active {
+                color: var(--apollo-brand-dark);
+
+                .apollo-button__icon {
+                    fill: var(--apollo-brand-dark);
+                }
+            }
+
+            &:focus-visible {
+                border-color: var(--apollo-color-font-link);
+            }
+        }
+
+        &_success {
+            background-color: var(--apollo-color-status-positive-primary);
+            border-color: var(--apollo-color-status-positive-primary);
+
+            &:hover {
+                border-color: var(--apollo-color-status-positive-secondary);
+            }
+
+            &:active {
+                background-color: var(--apollo-color-status-positive-secondary);
+                border-color: var(--apollo-color-status-positive-secondary);
+            }
+
+            &:focus-visible {
+                background-color: var(--apollo-color-status-positive-primary);
+                border-color: var(--apollo-color-status-positive-primary);
+                outline: 1px solid var(--apollo-color-font-alternative);
+                outline-offset: -2px;
+            }
+        }
+
+        &_negative {
+            background-color: var(--apollo-color-status-negative-primary);
+            border-color: var(--apollo-color-status-negative-primary);
+
+            &:hover {
+                border-color: var(--apollo-color-status-negative-secondary);
+            }
+
+            &:active {
+                background-color: var(--apollo-color-status-negative-secondary);
+                border-color: var(--apollo-color-status-negative-secondary);
+            }
+
+            &:focus-visible {
+                background-color: var(--apollo-color-status-negative-primary);
+                border-color: var(--apollo-color-status-negative-primary);
+                outline: 1px solid var(--apollo-color-font-alternative);
+                outline-offset: -2px;
+            }
+        }
+
+        // states
+        &:disabled {
+            &,
+            &:hover,
+            &:active,
+            &:focus {
+                cursor: default;
+                color: var(--apollo-color-font-disabled);
+                border-color: var(--apollo-color-border-secondary);
+                background-color: var(--apollo-color-background-disabled);
+            }
+        }
+
+        &_no-content {
+            padding: 4px;
+        }
+
+        &_full-width {
+            width: 100%;
+        }
+
+    }
+
+    & & {
+        &__icon {
+            &_primary,
+            &_success,
+            &_negative {
+                fill: var(--apollo-color-icon-alternative);
+            }
+
+            &_secondary {
+                fill: var(--apollo-color-icon-primary);
+            }
+
+            &_tertiary {
+                fill: var(--apollo-color-font-link);
+            }
+        }
+    }
+
+    &__skeleton {
+        @include utils.skeleton();
+        height: 32px;
+        border: 2px solid transparent;
+        width: 150px;
+
+        &_full-width {
+            width: 100%;
+        }
+    }
+}

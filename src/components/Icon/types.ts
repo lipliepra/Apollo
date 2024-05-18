@@ -1,5 +1,4 @@
 import {
-    type TFunc,
     type TIcon,
     type TNullable,
     type TRef,
@@ -16,16 +15,17 @@ export interface IIconProps {
     isLoading?: boolean;
     /** Флаг, определяющий, должен ли компонент быть больше  */
     isLarge?: boolean;
-    /** Флаг, определяющий, должна ли показываться заглушка  */
-    isShowSkeleton?: boolean;
     /** Флаг, определяющий наличие отступа справа от компонента  */
     withMarginRight?: boolean;
     /** Флаг, определяющий наличие отступа слева от компонента  */
     withMarginLeft?: boolean;
     /** Дополнительный класс для кастомизации */
     className?: string;
-    /** Функция, вызываемая при клике на компонент */
-    onClick?: TFunc;
     /** Ссылка на элемент  */
     reactRef?: TRef<HTMLSpanElement>;
+}
+
+export interface IIconWithSkeletonProps extends IIconProps {
+    /** Флаг, определяющий, должна ли показываться заглушка  */
+    isShowSkeleton?: boolean;
 }

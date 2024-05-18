@@ -1,5 +1,5 @@
 /**
- * RuntimeStatuses - Перечисление, определяющее различные статусы выполнения приложения или компонента.
+ * RuntimeStatuses - перечисление, определяющее различные статусы выполнения приложения или компонента.
  *
  * Статусы:
  * - BeforeInitial: Исходное состояние, до начала выполнения или инициализации.
@@ -12,4 +12,14 @@ export enum RuntimeStatuses {
     Ready = 'ready',
     Loading = 'loading',
     Error = 'error',
+}
+
+/**
+ * InfoStatuses - перечисление, определеющее статусы информационных сообщений.
+ */
+export enum InfoStatuses {
+    Positive = 'positive',
+    Negative = 'negative',
+    Warning = 'warning',
+    Process = 'process',
 }

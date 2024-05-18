@@ -2,105 +2,104 @@
 @use '../mixins/functions';
 
 // Text
-$apollo-light-font-color-primary: colors.$color-grey-10;
-$apollo-light-font-color-secondary: colors.$color-grey-7;
-$apollo-light-font-color-tertiary: colors.$color-grey-5;
-$apollo-light-font-color-disabled: colors.$color-grey-4;
-$apollo-light-font-color-alternative: colors.$color-grey-1;
-$apollo-light-font-color-link: colors.$color-blue-6;
-$apollo-light-font-color-link-hover: colors.$color-blue-7;
+$apollo-color-font-primary: colors.$color-grey-10;
+$apollo-color-font-secondary: colors.$color-grey-7;
+$apollo-color-font-tertiary: colors.$color-grey-5;
+$apollo-color-font-disabled: colors.$color-grey-4;
+$apollo-color-font-alternative: colors.$color-white;
+$apollo-color-font-link: colors.$color-blue-5;
+$apollo-color-font-link-hover: colors.$color-blue-7;
 
 // Background
-$apollo-light-background-color-primary: colors.$color-grey-1;
-$apollo-light-background-color-secondary: colors.$color-white;
-$apollo-light-background-color-tertiary: colors.$color-grey-3;
-$apollo-light-background-color-disabled: colors.$color-grey-2;
+$apollo-color-background-primary: colors.$color-grey-1;
+$apollo-color-background-secondary: colors.$color-white;
+$apollo-color-background-tertiary: colors.$color-grey-3;
+$apollo-color-background-disabled: colors.$color-grey-2;
 
 // Icon
-$apollo-light-icon-color-primary: colors.$color-grey-10;
-$apollo-light-icon-color-secondary: colors.$color-grey-7;
-$apollo-light-icon-color-tertiary: colors.$color-grey-5;
-$apollo-light-icon-color-alternative: colors.$color-white;
+$apollo-color-icon-primary: colors.$color-grey-10;
+$apollo-color-icon-secondary: colors.$color-grey-7;
+$apollo-color-icon-tertiary: colors.$color-grey-5;
+$apollo-color-icon-alternative: colors.$color-white;
 
 // Border
-$apollo-light-border-color-primary: colors.$color-grey-4;
-$apollo-light-border-color-secondary: colors.$color-grey-3;
-$apollo-light-border-color-tertiary: colors.$color-grey-2;
+$apollo-color-border-primary: colors.$color-grey-4;
+$apollo-color-border-secondary: colors.$color-grey-3;
+$apollo-color-border-tertiary: colors.$color-grey-2;
 
 // Divider
-$apollo-light-divider-color-primary: colors.$color-grey-3;
-$apollo-light-divider-color-secondary: colors.$color-grey-2;
+$apollo-color-divider-primary: colors.$color-grey-3;
+$apollo-color-divider-secondary: colors.$color-grey-2;
 
 // Status
-$apollo-light-status-color-negative: colors.$color-red-6;
-$apollo-light-status-color-positive: colors.$color-green-6;
-$apollo-light-status-color-warning: colors.$color-yellow-6;
-$apollo-light-status-color-progress: colors.$color-grey-6;
-
-$apollo-light-status-background-color-negative: functions.changeColorOpacity($apollo-light-status-color-negative, .3);
-$apollo-light-status-background-color-positive: functions.changeColorOpacity($apollo-light-status-color-positive, .3);
-$apollo-light-status-background-color-warning: functions.changeColorOpacity($apollo-light-status-color-warning, .3);
-$apollo-light-status-background-color-progress: functions.changeColorOpacity($apollo-light-status-color-progress, .3);
+$apollo-color-status-positive-primary: colors.$color-green-5;
+$apollo-color-status-positive-secondary: colors.$color-green-6;
+$apollo-color-status-negative-primary: colors.$color-red-5;
+$apollo-color-status-negative-secondary: colors.$color-red-6;
+$apollo-color-status-warning-primary: colors.$color-yellow-5;
+$apollo-color-status-warning-secondary: colors.$color-yellow-6;
+$apollo-color-status-process-primary: colors.$color-grey-5;
+$apollo-color-status-process-secondary: colors.$color-grey-6;
 
 // Elevation
-$apollo-light-elevation-color-primary: functions.changeColorOpacity(colors.$color-grey-10, .20);
+$apollo-color-elevation-primary: functions.changeColorOpacity(colors.$color-grey-10, .20);
 
 // Overlay
-$apollo-light-overlay-color-primary: functions.changeColorOpacity(colors.$color-grey-10, .80);
+$apollo-color-overlay-primary: functions.changeColorOpacity(colors.$color-grey-10, .80);
 
 // Skeleton
-$apollo-light-skeleton-color-primary: #{colors.$color-grey-2};
-$apollo-light-skeleton-color-secondary: #{colors.$color-grey-1};
+$apollo-color-skeleton-primary: #{colors.$color-grey-2};
+$apollo-color-skeleton-secondary: #{colors.$color-grey-1};
 
 /** Light Theme (default) */
 :root, :root[data-theme='light'] {
     /** Text */
-    --apollo-font-color-primary: #{$apollo-light-font-color-primary};
-    --apollo-font-color-secondary: #{$apollo-light-font-color-secondary};
-    --apollo-font-color-tertiary: #{$apollo-light-font-color-tertiary};
-    --apollo-font-color-disabled: #{$apollo-light-font-color-disabled};
-    --apollo-font-color-alternative: #{$apollo-light-font-color-alternative};
-    --apollo-font-color-link: #{$apollo-light-font-color-link};
+    --apollo-color-font-primary: #{$apollo-color-font-primary};
+    --apollo-color-font-secondary: #{$apollo-color-font-secondary};
+    --apollo-color-font-tertiary: #{$apollo-color-font-tertiary};
+    --apollo-color-font-disabled: #{$apollo-color-font-disabled};
+    --apollo-color-font-alternative: #{$apollo-color-font-alternative};
+    --apollo-color-font-link: #{$apollo-color-font-link};
+    --apollo-color-font-link-hover: #{$apollo-color-font-link-hover};
 
     /** Background */
-    --apollo-background-color-primary: #{$apollo-light-background-color-primary};
-    --apollo-background-color-secondary: #{$apollo-light-background-color-secondary};
-    --apollo-background-color-tertiary: #{$apollo-light-background-color-tertiary};
-    --apollo-background-color-disabled: #{$apollo-light-background-color-disabled};
+    --apollo-color-background-primary: #{$apollo-color-background-primary};
+    --apollo-color-background-secondary: #{$apollo-color-background-secondary};
+    --apollo-color-background-tertiary: #{$apollo-color-background-tertiary};
+    --apollo-color-background-disabled: #{$apollo-color-background-disabled};
 
     /** Icon */
-    --apollo-icon-color-primary: #{$apollo-light-icon-color-primary};
-    --apollo-icon-color-secondary: #{$apollo-light-icon-color-secondary};
-    --apollo-icon-color-tertiary: #{$apollo-light-icon-color-tertiary};
-    --apollo-icon-color-alternative: #{$apollo-light-icon-color-alternative};
+    --apollo-color-icon-primary: #{$apollo-color-icon-primary};
+    --apollo-color-icon-secondary: #{$apollo-color-icon-secondary};
+    --apollo-color-icon-tertiary: #{$apollo-color-icon-tertiary};
+    --apollo-color-icon-alternative: #{$apollo-color-icon-alternative};
 
     /** Border */
-    --apollo-border-color-primary: #{$apollo-light-border-color-primary};
-    --apollo-border-color-secondary: #{$apollo-light-border-color-secondary};
-    --apollo-border-color-tertiary: #{$apollo-light-border-color-tertiary};
+    --apollo-color-border-primary: #{$apollo-color-border-primary};
+    --apollo-color-border-secondary: #{$apollo-color-border-secondary};
+    --apollo-color-border-tertiary: #{$apollo-color-border-tertiary};
 
     /** Divider */
-    --apollo-divider-color-primary: #{$apollo-light-divider-color-primary};
-    --apollo-divider-color-secondary: #{$apollo-light-divider-color-secondary};
+    --apollo-color-divider-primary: #{$apollo-color-divider-primary};
+    --apollo-color-divider-secondary: #{$apollo-color-divider-secondary};
 
     /** Status */
-    --apollo-status-color-negative: #{$apollo-light-status-color-negative};
-    --apollo-status-color-positive: #{$apollo-light-status-color-positive};
-    --apollo-status-color-warning: #{$apollo-light-status-color-warning};
-    --apollo-status-color-progress: #{$apollo-light-status-color-progress};
-
-    --apollo-status-background-color-negative: #{$apollo-light-status-background-color-negative};
-    --apollo-status-background-color-positive: #{$apollo-light-status-background-color-positive};
-    --apollo-status-background-color-warning: #{$apollo-light-status-background-color-warning};
-    --apollo-status-background-color-progress: #{$apollo-light-status-background-color-progress};
+    --apollo-color-status-positive-primary: #{$apollo-color-status-positive-primary};
+    --apollo-color-status-positive-secondary: #{$apollo-color-status-positive-secondary};
+    --apollo-color-status-negative-primary: #{$apollo-color-status-negative-primary};
+    --apollo-color-status-negative-secondary: #{$apollo-color-status-negative-secondary};
+    --apollo-color-status-warning-primary: #{$apollo-color-status-warning-primary};
+    --apollo-color-status-warning-secondary: #{$apollo-color-status-warning-secondary};
+    --apollo-color-status-process-primary: #{$apollo-color-status-process-primary};
+    --apollo-color-status-process-secondary: #{$apollo-color-status-process-secondary};
 
     /** Elevation */
-    --apollo-elevation-color-primary: #{$apollo-light-elevation-color-primary};
+    --apollo-color-elevation-primary: #{$apollo-color-elevation-primary};
 
     /** Overlay */
-    --apollo-overlay-color-primary: #{$apollo-light-overlay-color-primary};
+    --apollo-color-overlay-primary: #{$apollo-color-overlay-primary};
 
     /** Skeleton */
-    --apollo-skeleton-color-primary: #{$apollo-light-skeleton-color-primary};
-    --apollo-skeleton-color-skeleton: #{$apollo-light-skeleton-color-secondary};
+    --apollo-color-skeleton-primary: #{$apollo-color-skeleton-primary};
+    --apollo-color-skeleton-secondary: #{$apollo-color-skeleton-secondary};
 }

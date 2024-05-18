@@ -1,0 +1,12 @@
+@use '../../variables/colors';
+
+$default-brand: colors.$color-grey-7;
+$default-brand-dark: colors.$color-grey-8;
+$default-brand-light: colors.$color-grey-5;
+
+/** default brand */
+:root, :root[data-brand='brown'] {
+    --apollo-brand: #{$default-brand};
+    --apollo-brand-dark: #{$default-brand-dark};
+    --apollo-brand-light: #{$default-brand-light};
+}

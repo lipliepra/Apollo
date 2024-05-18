@@ -10,9 +10,6 @@ import {
 /** Функциональный компонент с дочерними элементами */
 export type CFC<P = unknown> = FC<PropsWithChildren<P>>;
 
-/** Статус: информация, успех, предупреждение или ошибка */
-export type TStatus = ('info' | 'success' | 'warning' | 'error');
-
 /** Функция с определенными аргументами и возвращаемым значением */
 export type TFunc<Args extends Array<unknown> = Array<never>, Return = void> = (...args: Args) => Return;
 

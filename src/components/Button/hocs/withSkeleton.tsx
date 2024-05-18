@@ -2,11 +2,11 @@ import { type FC } from 'react';
 
 import { Skeleton } from '../parts/Skeleton';
 import {
-    type IIconProps,
-    type IIconWithSkeletonProps,
+    type IButtonProps,
+    type IButtonWithSkeletonProps,
 } from '../types';
 
-export const withSkeleton = (Component: FC<IIconProps>) => (props: IIconWithSkeletonProps) => {
+export const withSkeleton = (Component: FC<IButtonProps>) => (props: IButtonWithSkeletonProps) => {
     const { isShowSkeleton } = props;
 
     if (isShowSkeleton) return <Skeleton {...props} />;
