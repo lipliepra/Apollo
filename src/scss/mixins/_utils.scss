@@ -28,7 +28,7 @@
     position: relative;
     overflow: hidden;
     border-radius: var(--apollo-border-radius);
-    background-color: var(--apollo-skeleton-color-primary);
+    background-color: var(--apollo-color-skeleton-primary);
 
     &:before {
         content: '';
@@ -38,7 +38,7 @@
         right: 0;
         bottom: 0;
         background-size: 100%;
-        background-image: linear-gradient(90deg, var(--apollo-skeleton-color-primary) 0, var(--apollo-skeleton-color-skeleton) 40px, var(--apollo-skeleton-color-primary) 80px);
+        background-image: linear-gradient(90deg, var(--apollo-color-skeleton-primary) 0, var(--apollo-color-skeleton-secondary) 40px, var(--apollo-color-skeleton-primary) 80px);
         animation: skeleton-animation 1s infinite linear;
     }
 }
@@ -54,12 +54,12 @@
 
     &::-webkit-scrollbar-track {
         display: none;
-        background-color: var(--apollo-background-color-secondary);
+        background-color: var(--apollo-color-background-secondary);
     }
 
     &::-webkit-scrollbar-thumb {
         display: none;
-        background: var(--apollo-border-color-secondary);
+        background: var(--apollo-color-border-secondary);
         border-radius: 4px;
     }
 }
