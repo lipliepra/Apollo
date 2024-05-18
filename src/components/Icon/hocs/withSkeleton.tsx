@@ -1,9 +1,12 @@
 import { type FC } from 'react';
 
 import { Skeleton } from '../parts/Skeleton';
-import { type IIconProps } from '../types';
+import {
+    type IIconProps,
+    type IIconWithSkeletonProps,
+} from '../types';
 
-export const withSkeleton = (Component: FC<IIconProps>) => (props: IIconProps) => {
+export const withSkeleton = (Component: FC<IIconProps>) => (props: IIconWithSkeletonProps) => {
     const { isShowSkeleton } = props;
 
     if (isShowSkeleton) return <Skeleton {...props} />;

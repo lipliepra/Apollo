@@ -1,6 +1,5 @@
 import { type FC } from 'react';
 
-import { NOOP } from '../../../constants';
 import { generateCLassNames } from '../../../utils/generateClassNames';
 import { withSkeleton } from '../hocs/withSkeleton';
 import { type IIconProps } from '../types';
@@ -14,7 +13,6 @@ const Component: FC<IIconProps> = ({
     withMarginLeft = false,
     withMarginRight = false,
     className = '',
-    onClick = NOOP,
     reactRef = null,
 }) => {
     const generatedClassNames = generateCLassNames({
@@ -33,7 +31,6 @@ const Component: FC<IIconProps> = ({
         <span
             className={generatedClassNames}
             data-test-id={`${dataTestId}Icon`}
-            onClick={onClick}
             ref={reactRef}
         >
             <IconElem />
