@@ -41,4 +41,6 @@ export type {
 } from './types';
 /** Utils */
 export { generateCLassNames } from './utils/generateClassNames';
+export { getGuid } from './utils/getGuid';
 export { lStorage } from './utils/lStorage';
+export { sStorage } from './utils/sStorage';
