@@ -1,10 +1,9 @@
 import { type FC } from 'react';
 
 import { generateCLassNames } from '../../../utils/generateClassNames';
-import { withSkeleton } from '../hocs/withSkeleton';
 import { type IIconProps } from '../types';
 
-const Component: FC<IIconProps> = ({
+export const Component: FC<IIconProps> = ({
     path: IconElem,
     dataTestId,
     isActive = false,
@@ -37,5 +36,3 @@ const Component: FC<IIconProps> = ({
         </span>
     );
 };
-
-export default withSkeleton(Component);

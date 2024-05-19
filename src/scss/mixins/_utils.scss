@@ -29,6 +29,7 @@
     overflow: hidden;
     border-radius: var(--apollo-border-radius);
     background-color: var(--apollo-color-skeleton-primary);
+    box-sizing: border-box;
 
     &:before {
         content: '';

@@ -1,11 +1,8 @@
-import {
-    type FC,
-    useMemo,
-} from 'react';
+import { type FC } from 'react';
 
-import { ICONS } from '../../../assets';
 import { generateCLassNames } from '../../../utils/generateClassNames';
 import { Icon } from '../../Icon';
+import { getPostfixIcon } from '../utils';
 import { type IButtonIconProps } from '../types';
 
 export const IconPostfix: FC<IButtonIconProps> = ({
@@ -15,14 +12,7 @@ export const IconPostfix: FC<IButtonIconProps> = ({
     isLoading = false,
     iconPostfix = null,
 }) => {
-    const iconPath = useMemo(() => {
-        if (isLoading) return ICONS.Loader;
-
-        return iconPostfix;
-    }, [
-        isLoading,
-        iconPostfix,
-    ]);
+    const iconPath = getPostfixIcon(iconPostfix, isLoading);
 
     const iconPostfixCls = generateCLassNames({
         block: 'apollo-button',
@@ -30,7 +20,7 @@ export const IconPostfix: FC<IButtonIconProps> = ({
         mods: { [pattern]: true },
     });
 
-    if (!iconPath) return null;
+    if (!iconPostfix) return null;
 
     return (
         <Icon

@@ -1,7 +1,6 @@
 import { type FC } from 'react';
 
 import { generateCLassNames } from '../../../utils/generateClassNames';
-import { withSkeleton } from '../hocs/withSkeleton';
 import { IconPostfix } from './IconPostfix';
 import { IconPrefix } from './IconPrefix';
 import {
@@ -9,7 +8,7 @@ import {
     type IButtonProps,
 } from '../types';
 
-const Component: FC<IButtonProps> = ({
+export const Component: FC<IButtonProps> = ({
     content = '',
     onClick,
     dataTestId,
@@ -58,9 +57,6 @@ const Component: FC<IButtonProps> = ({
                 {...commonIconProps}
                 iconPostfix={iconPostfix}
             />
-
         </button>
     );
 };
-
-export default withSkeleton(Component);

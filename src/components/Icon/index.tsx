@@ -1,15 +1,5 @@
-import {
-    type FC,
-    Suspense,
-} from 'react';
-
-import { IconLazy } from './lazy';
-import { Skeleton } from './parts/Skeleton';
-import { type IIconProps } from './types';
+import { withSkeleton } from './hocs/withSkeleton';
+import { Component } from './parts/Component';
 
 /** Компонент иконки */
-export const Icon: FC<IIconProps> = (props) => (
-    <Suspense fallback={<Skeleton {...props} />}>
-        <IconLazy {...props} />
-    </Suspense>
-);
+export const Icon = withSkeleton(Component);

@@ -1,15 +1,5 @@
-import {
-    type FC,
-    Suspense,
-} from 'react';
-
-import { ButtonLazy } from './lazy';
-import { Skeleton } from './parts/Skeleton';
-import { type IButtonProps } from './types';
+import { withSkeleton } from './hocs/withSkeleton';
+import { Component } from './parts/Component';
 
 /** Компонент кнопки */
-export const Button: FC<IButtonProps> = (props) => (
-    <Suspense fallback={<Skeleton {...props} />}>
-        <ButtonLazy {...props} />
-    </Suspense>
-);
+export const Button = withSkeleton(Component);
