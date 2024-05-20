@@ -2,10 +2,10 @@
 
 $default-brand: colors.$color-grey-7;
 $default-brand-dark: colors.$color-grey-8;
-$default-brand-light: colors.$color-grey-5;
+$default-brand-light: colors.$color-grey-4;
 
 /** default brand */
-:root {
+:root, :root[data-brand='default'] {
     --apollo-brand: #{$default-brand};
     --apollo-brand-dark: #{$default-brand-dark};
     --apollo-brand-light: #{$default-brand-light};

@@ -17,11 +17,13 @@
  *   которые либо не выполняют никаких действий, либо возвращают null.
  */
 export const lStorage = (() => {
-    const isEnable = !!localStorage || null;
+    const isEnable = Boolean(window?.localStorage);
 
     return {
         set: (key: string, value: string) => { isEnable && localStorage.setItem(key, value); },
-        get: (key: string) => isEnable && localStorage.getItem(key),
+        get: (key: string) => isEnable
+            ? localStorage.getItem(key)
+            : null,
         setJson: (key: string, value: unknown) => {
             isEnable && localStorage.setItem(
                 key,
@@ -29,7 +31,7 @@ export const lStorage = (() => {
             );
         },
         getJson: (key: string, defaultValue: unknown = null) => {
-            if (!isEnable) return null;
+            if (!isEnable) return defaultValue;
 
             const value = localStorage.getItem(key);
 

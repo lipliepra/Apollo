@@ -20,7 +20,7 @@ export const IconPostfix: FC<IButtonIconProps> = ({
         mods: { [pattern]: true },
     });
 
-    if (!iconPostfix) return null;
+    if (!iconPath) return null;
 
     return (
         <Icon
