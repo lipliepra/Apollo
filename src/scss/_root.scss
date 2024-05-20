@@ -16,17 +16,7 @@
     --apollo-color-grey-8: #{colors.$color-grey-8};
     --apollo-color-grey-9: #{colors.$color-grey-9};
     --apollo-color-grey-10: #{colors.$color-grey-10};
-    // RED
-    --apollo-color-red-1: #{colors.$color-red-1};
-    --apollo-color-red-2: #{colors.$color-red-2};
-    --apollo-color-red-3: #{colors.$color-red-3};
-    --apollo-color-red-4: #{colors.$color-red-4};
-    --apollo-color-red-5: #{colors.$color-red-5};
-    --apollo-color-red-6: #{colors.$color-red-6};
-    --apollo-color-red-7: #{colors.$color-red-7};
-    --apollo-color-red-8: #{colors.$color-red-8};
-    --apollo-color-red-9: #{colors.$color-red-9};
-    --apollo-color-red-10: #{colors.$color-red-10};
+
     // ORANGE
     --apollo-color-orange-1: #{colors.$color-orange-1};
     --apollo-color-orange-2: #{colors.$color-orange-2};
@@ -38,17 +28,7 @@
     --apollo-color-orange-8: #{colors.$color-orange-8};
     --apollo-color-orange-9: #{colors.$color-orange-9};
     --apollo-color-orange-10: #{colors.$color-orange-10};
-    // PURPLE
-    --apollo-color-purple-1: #{colors.$color-purple-1};
-    --apollo-color-purple-2: #{colors.$color-purple-2};
-    --apollo-color-purple-3: #{colors.$color-purple-3};
-    --apollo-color-purple-4: #{colors.$color-purple-4};
-    --apollo-color-purple-5: #{colors.$color-purple-5};
-    --apollo-color-purple-6: #{colors.$color-purple-6};
-    --apollo-color-purple-7: #{colors.$color-purple-7};
-    --apollo-color-purple-8: #{colors.$color-purple-8};
-    --apollo-color-purple-9: #{colors.$color-purple-9};
-    --apollo-color-purple-10: #{colors.$color-purple-10};
+
     // BLUE
     --apollo-color-blue-1: #{colors.$color-blue-1};
     --apollo-color-blue-2: #{colors.$color-blue-2};
@@ -60,28 +40,19 @@
     --apollo-color-blue-8: #{colors.$color-blue-8};
     --apollo-color-blue-9: #{colors.$color-blue-9};
     --apollo-color-blue-10: #{colors.$color-blue-10};
-    // GREEN
-    --apollo-color-green-1: #{colors.$color-green-1};
-    --apollo-color-green-2: #{colors.$color-green-2};
-    --apollo-color-green-3: #{colors.$color-green-3};
-    --apollo-color-green-4: #{colors.$color-green-4};
-    --apollo-color-green-5: #{colors.$color-green-5};
-    --apollo-color-green-6: #{colors.$color-green-6};
-    --apollo-color-green-7: #{colors.$color-green-7};
-    --apollo-color-green-8: #{colors.$color-green-8};
-    --apollo-color-green-9: #{colors.$color-green-9};
-    --apollo-color-green-10: #{colors.$color-green-10};
-    // YELLOW
-    --apollo-color-yellow-1: #{colors.$color-yellow-1};
-    --apollo-color-yellow-2: #{colors.$color-yellow-2};
-    --apollo-color-yellow-3: #{colors.$color-yellow-3};
-    --apollo-color-yellow-4: #{colors.$color-yellow-4};
-    --apollo-color-yellow-5: #{colors.$color-yellow-5};
-    --apollo-color-yellow-6: #{colors.$color-yellow-6};
-    --apollo-color-yellow-7: #{colors.$color-yellow-7};
-    --apollo-color-yellow-8: #{colors.$color-yellow-8};
-    --apollo-color-yellow-9: #{colors.$color-yellow-9};
-    --apollo-color-yellow-10: #{colors.$color-yellow-10};
+
+    // PURPLE
+    --apollo-color-purple-1: #{colors.$color-purple-1};
+    --apollo-color-purple-2: #{colors.$color-purple-2};
+    --apollo-color-purple-3: #{colors.$color-purple-3};
+    --apollo-color-purple-4: #{colors.$color-purple-4};
+    --apollo-color-purple-5: #{colors.$color-purple-5};
+    --apollo-color-purple-6: #{colors.$color-purple-6};
+    --apollo-color-purple-7: #{colors.$color-purple-7};
+    --apollo-color-purple-8: #{colors.$color-purple-8};
+    --apollo-color-purple-9: #{colors.$color-purple-9};
+    --apollo-color-purple-10: #{colors.$color-purple-10};
+
     // MAGENTA
     --apollo-color-magenta-1: #{colors.$color-magenta-1};
     --apollo-color-magenta-2: #{colors.$color-magenta-2};
@@ -93,6 +64,54 @@
     --apollo-color-magenta-8: #{colors.$color-magenta-8};
     --apollo-color-magenta-9: #{colors.$color-magenta-9};
     --apollo-color-magenta-10: #{colors.$color-magenta-10};
+
+    // MAGENTA
+    --apollo-color-teal-1: #{colors.$color-teal-1};
+    --apollo-color-teal-2: #{colors.$color-teal-2};
+    --apollo-color-teal-3: #{colors.$color-teal-3};
+    --apollo-color-teal-4: #{colors.$color-teal-4};
+    --apollo-color-teal-5: #{colors.$color-teal-5};
+    --apollo-color-teal-6: #{colors.$color-teal-6};
+    --apollo-color-teal-7: #{colors.$color-teal-7};
+    --apollo-color-teal-8: #{colors.$color-teal-8};
+    --apollo-color-teal-9: #{colors.$color-teal-9};
+    --apollo-color-teal-10: #{colors.$color-teal-10};
+
+    // RED
+    --apollo-color-red-1: #{colors.$color-red-1};
+    --apollo-color-red-2: #{colors.$color-red-2};
+    --apollo-color-red-3: #{colors.$color-red-3};
+    --apollo-color-red-4: #{colors.$color-red-4};
+    --apollo-color-red-5: #{colors.$color-red-5};
+    --apollo-color-red-6: #{colors.$color-red-6};
+    --apollo-color-red-7: #{colors.$color-red-7};
+    --apollo-color-red-8: #{colors.$color-red-8};
+    --apollo-color-red-9: #{colors.$color-red-9};
+    --apollo-color-red-10: #{colors.$color-red-10};
+
+    // GREEN
+    --apollo-color-green-1: #{colors.$color-green-1};
+    --apollo-color-green-2: #{colors.$color-green-2};
+    --apollo-color-green-3: #{colors.$color-green-3};
+    --apollo-color-green-4: #{colors.$color-green-4};
+    --apollo-color-green-5: #{colors.$color-green-5};
+    --apollo-color-green-6: #{colors.$color-green-6};
+    --apollo-color-green-7: #{colors.$color-green-7};
+    --apollo-color-green-8: #{colors.$color-green-8};
+    --apollo-color-green-9: #{colors.$color-green-9};
+    --apollo-color-green-10: #{colors.$color-green-10};
+
+    // YELLOW
+    --apollo-color-yellow-1: #{colors.$color-yellow-1};
+    --apollo-color-yellow-2: #{colors.$color-yellow-2};
+    --apollo-color-yellow-3: #{colors.$color-yellow-3};
+    --apollo-color-yellow-4: #{colors.$color-yellow-4};
+    --apollo-color-yellow-5: #{colors.$color-yellow-5};
+    --apollo-color-yellow-6: #{colors.$color-yellow-6};
+    --apollo-color-yellow-7: #{colors.$color-yellow-7};
+    --apollo-color-yellow-8: #{colors.$color-yellow-8};
+    --apollo-color-yellow-9: #{colors.$color-yellow-9};
+    --apollo-color-yellow-10: #{colors.$color-yellow-10};
 
     /** Font family */
     --apollo-font-family-primary: #{fonts.$font-family-primary};
