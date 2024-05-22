@@ -1,8 +1,7 @@
 @import 'themes';
+@import 'colors';
 @import 'root';
 @import 'typography';
 @import 'helpers';
 @import 'keyframes';
-// TODO: возможноразнести по файлам и прописать отдельные команды
-//  по типу "build:scss:components": "sass src/scss/_components.scss dist/css/components.css",
 @import 'components';

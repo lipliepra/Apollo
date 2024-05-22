@@ -27,7 +27,7 @@
 @mixin skeleton {
     position: relative;
     overflow: hidden;
-    border-radius: var(--apollo-border-radius);
+    border-radius: var(--apollo-border-radius-primary);
     background-color: var(--apollo-color-skeleton-primary);
     box-sizing: border-box;
 
@@ -72,22 +72,22 @@
     white-space: nowrap;
 }
 
-@mixin border-top-radius($radius: var(--apollo-border-radius)) {
+@mixin border-top-radius($radius: var(--apollo-border-radius-primary)) {
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
 }
 
-@mixin border-right-radius($radius: var(--apollo-border-radius)) {
+@mixin border-right-radius($radius: var(--apollo-border-radius-primary)) {
     border-top-right-radius: $radius;
     border-bottom-right-radius: $radius;
 }
 
-@mixin border-bottom-radius($radius: var(--apollo-border-radius)) {
+@mixin border-bottom-radius($radius: var(--apollo-border-radius-primary)) {
     border-bottom-right-radius: $radius;
     border-bottom-left-radius: $radius;
 }
 
-@mixin border-left-radius($radius: var(--apollo-border-radius)) {
+@mixin border-left-radius($radius: var(--apollo-border-radius-primary)) {
     border-top-left-radius: $radius;
     border-bottom-left-radius: $radius;
 }

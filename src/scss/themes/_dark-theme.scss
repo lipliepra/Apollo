@@ -15,6 +15,7 @@ $apollo-color-background-primary: colors.$color-grey-10;
 $apollo-color-background-secondary: colors.$color-grey-8;
 $apollo-color-background-tertiary: colors.$color-grey-9;
 $apollo-color-background-disabled: colors.$color-grey-9;
+$apollo-color-background-alternative: colors.$color-grey-4;
 
 // Icon
 $apollo-color-icon-primary: colors.$color-grey-1;
@@ -63,6 +64,7 @@ $apollo-color-skeleton-secondary: #{colors.$color-grey-9};
     --apollo-color-background-secondary: #{$apollo-color-background-secondary};
     --apollo-color-background-tertiary: #{$apollo-color-background-tertiary};
     --apollo-color-background-disabled: #{$apollo-color-background-disabled};
+    --apollo-color-background-alternative: #{$apollo-color-background-alternative};
 
     /** Icon */
     --apollo-color-icon-primary: #{$apollo-color-icon-primary};
