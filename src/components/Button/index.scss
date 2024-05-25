@@ -89,42 +89,42 @@
         }
 
         &_success {
-            background-color: var(--apollo-color-status-positive-primary);
-            border-color: var(--apollo-color-status-positive-primary);
+            background-color: var(--apollo-color-status-positive);
+            border-color: var(--apollo-color-status-positive);
 
             &:hover {
-                border-color: var(--apollo-color-status-positive-secondary);
+                border-color: var(--apollo-color-status-positive-dark);
             }
 
             &:active {
-                background-color: var(--apollo-color-status-positive-secondary);
-                border-color: var(--apollo-color-status-positive-secondary);
+                background-color: var(--apollo-color-status-positive-dark);
+                border-color: var(--apollo-color-status-positive-dark);
             }
 
             &:focus-visible {
-                background-color: var(--apollo-color-status-positive-primary);
-                border-color: var(--apollo-color-status-positive-primary);
+                background-color: var(--apollo-color-status-positive);
+                border-color: var(--apollo-color-status-positive);
                 outline: 1px solid var(--apollo-color-font-alternative);
                 outline-offset: -2px;
             }
         }
 
         &_negative {
-            background-color: var(--apollo-color-status-negative-primary);
-            border-color: var(--apollo-color-status-negative-primary);
+            background-color: var(--apollo-color-status-negative);
+            border-color: var(--apollo-color-status-negative);
 
             &:hover {
-                border-color: var(--apollo-color-status-negative-secondary);
+                border-color: var(--apollo-color-status-negative-dark);
             }
 
             &:active {
-                background-color: var(--apollo-color-status-negative-secondary);
-                border-color: var(--apollo-color-status-negative-secondary);
+                background-color: var(--apollo-color-status-negative-dark);
+                border-color: var(--apollo-color-status-negative-dark);
             }
 
             &:focus-visible {
-                background-color: var(--apollo-color-status-negative-primary);
-                border-color: var(--apollo-color-status-negative-primary);
+                background-color: var(--apollo-color-status-negative);
+                border-color: var(--apollo-color-status-negative);
                 outline: 1px solid var(--apollo-color-font-alternative);
                 outline-offset: -2px;
             }

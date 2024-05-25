@@ -33,13 +33,20 @@ $apollo-color-divider-primary: colors.$color-grey-8;
 $apollo-color-divider-secondary: colors.$color-grey-7;
 
 // Status
-$apollo-color-status-positive-primary: colors.$color-green-5;
-$apollo-color-status-positive-secondary: colors.$color-green-6;
-$apollo-color-status-negative-primary: colors.$color-red-5;
-$apollo-color-status-negative-secondary: colors.$color-red-6;
+$apollo-color-status-positive: colors.$color-green-5;
+$apollo-color-status-positive-dark: colors.$color-green-6;
+$apollo-color-status-positive-light: colors.$color-green-4;
+
+$apollo-color-status-negative: colors.$color-red-6;
+$apollo-color-status-negative-dark: colors.$color-red-7;
+$apollo-color-status-negative-light: colors.$color-red-4;
+
+$apollo-color-status-warning: colors.$color-yellow-5;
+$apollo-color-status-warning-dark: colors.$color-yellow-6;
+$apollo-color-status-warning-light: colors.$color-yellow-4;
 
 // Elevation
-$apollo-color-elevation-primary: functions.changeColorOpacity(colors.$color-grey-1, .20);
+$apollo-color-shadow-primary: functions.changeColorOpacity(colors.$color-grey-1, .20);
 
 // Overlay
 $apollo-color-overlay-primary: functions.changeColorOpacity(colors.$color-grey-1, .80);
@@ -82,13 +89,20 @@ $apollo-color-skeleton-secondary: #{colors.$color-grey-9};
     --apollo-color-divider-secondary: #{$apollo-color-divider-secondary};
 
     /** Status */
-    --apollo-color-status-positive-primary: #{$apollo-color-status-positive-primary};
-    --apollo-color-status-positive-secondary: #{$apollo-color-status-positive-secondary};
-    --apollo-color-status-negative-primary: #{$apollo-color-status-negative-primary};
-    --apollo-color-status-negative-secondary: #{$apollo-color-status-negative-secondary};
+    --apollo-color-status-positive: #{$apollo-color-status-positive};
+    --apollo-color-status-positive-dark: #{$apollo-color-status-positive-dark};
+    --apollo-color-status-positive-light: #{$apollo-color-status-positive-light};
 
-    /** Elevation */
-    --apollo-color-elevation-primary: #{$apollo-color-elevation-primary};
+    --apollo-color-status-negative: #{$apollo-color-status-negative};
+    --apollo-color-status-negative-dark: #{$apollo-color-status-negative-dark};
+    --apollo-color-status-negative-light: #{$apollo-color-status-negative-light};
+
+    --apollo-color-status-warning: #{$apollo-color-status-warning};
+    --apollo-color-status-warning-dark: #{$apollo-color-status-warning-dark};
+    --apollo-color-status-warning-light: #{$apollo-color-status-warning-light};
+
+    /** Shadow */
+    --apollo-color-shadow-primary: #{$apollo-color-shadow-primary};
 
     /** Overlay */
     --apollo-color-overlay-primary: #{$apollo-color-overlay-primary};
