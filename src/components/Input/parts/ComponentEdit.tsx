@@ -29,7 +29,7 @@ export const ComponentEdit: FC<IInputProps> = ({
 }) => {
     const [localValue, setLocalValue] = useState<string>('');
     const [isHaveError, setIsHaveError] = useState<boolean>(hasError);
-    const [isPasswordInput, setIsPasswordInput] = useState<boolean>(type === 'text');
+    const [isPasswordInput, setIsPasswordInput] = useState<boolean>(type === 'password');
 
     useEffect(() => {
         setIsHaveError(hasError);
