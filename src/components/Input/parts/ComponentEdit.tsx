@@ -29,6 +29,7 @@ export const ComponentEdit: FC<IInputProps> = ({
 }) => {
     const [localValue, setLocalValue] = useState<string>('');
     const [isHaveError, setIsHaveError] = useState<boolean>(hasError);
+    const [isPasswordInput, setIsPasswordInput] = useState<boolean>(type === 'text');
 
     useEffect(() => {
         setIsHaveError(hasError);
@@ -50,6 +51,7 @@ export const ComponentEdit: FC<IInputProps> = ({
         mods: {
             disabled: isDisabled,
             'has-error': isHaveError,
+            'is-password': type === 'password',
         },
         className,
     });
@@ -79,13 +81,26 @@ export const ComponentEdit: FC<IInputProps> = ({
                 onFocus={onFocus}
                 placeholder={placeholder}
                 ref={reactRef}
-                type={type}
                 value={localValue}
+                type={isPasswordInput
+                    ? 'password'
+                    : 'text'}
             />
 
-            {localValue && !isDisabled && (
+            {Boolean(localValue) && type === 'password' && (
                 <Icon
-                    className='apollo-input__icon'
+                    className='apollo-input__icon-view'
+                    dataTestId={`${dataTestId}ViewInput`}
+                    onClick={() => { setIsPasswordInput((state) => !state); }}
+                    path={isPasswordInput
+                        ? ICONS.EyeOpen
+                        : ICONS.EyeClose}
+                />
+            )}
+
+            {Boolean(localValue) && !isDisabled && (
+                <Icon
+                    className='apollo-input__icon-clear'
                     dataTestId={`${dataTestId}ClearInput`}
                     onClick={resetValueHandler}
                     path={ICONS.Cross}

@@ -5,7 +5,7 @@ import {
     type TRef,
 } from '../../types';
 
-type TInputType = ('text' | 'password');
+export type TInputType = ('text' | 'password');
 
 export interface IInputProps {
     value: string;

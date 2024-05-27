@@ -45,15 +45,30 @@
                 color: var(--apollo-color-font-disabled);
             }
         }
+
+        &_is-password {
+            padding-right: 64px;
+        }
     }
 
     &__icon {
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translateY(7px) translateX(-5px);
-        cursor: pointer;
-        flex-shrink: 0;
+        &-clear {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateY(7px) translateX(-5px);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        &-view {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateY(7px) translateX(-37px);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
     }
 
     &__wrapper {
