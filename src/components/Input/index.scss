@@ -1,0 +1,112 @@
+@use '../../scss/mixins/utils';
+@use '../../scss/variables/typography';
+@import '../../scss/mixins/typography';
+
+.apollo-input {
+    @include text(typography.$fs-body);
+    @include utils.textEllipsis;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid var(--apollo-color-border-primary);
+    background-color: var(--apollo-color-background-secondary);
+    border-radius: var(--apollo-border-radius-primary);
+    padding: 5px 32px 5px 10px;
+    width: 100%;
+    outline: none;
+
+    &:-webkit-autofill {
+        -webkit-box-shadow: inset 0 0 0 50px var(--apollo-color-background-secondary);
+    }
+
+    &:focus, &:focus-visible {
+        border-color: var(--apollo-brand);
+    }
+
+    &::placeholder {
+        @include text(typography.$fs-helper);
+        overflow-x: clip;
+        text-overflow: ellipsis;
+    }
+
+    &.apollo-input {
+
+        &_has-error {
+            border-color: var(--apollo-color-status-negative);
+        }
+
+        &_disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+            border-color: var(--apollo-color-border-secondary);
+            background-color: var(--apollo-color-background-disabled);
+            color: var(--apollo-color-font-disabled);
+
+            &::placeholder {
+                color: var(--apollo-color-font-disabled);
+            }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(7px) translateX(-5px);
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    &__wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    &__view {
+        min-height: 36px;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+
+        &_with-hidden {
+            padding-right: 32px;
+        }
+
+        & & {
+            &-text {
+                @include text(typography.$fs-body);
+                display: inline-block;
+                padding-top: 6px;
+
+                &_with-hidden {
+                    @include utils.textEllipsis();
+                    display: block;
+                }
+
+                &_with-empty-caption {
+                    @include text(typography.$fs-helper);
+                }
+            }
+
+            &-icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateY(7px) translateX(-5px);
+                cursor: pointer;
+                flex-shrink: 0;
+            }
+        }
+
+    }
+
+    &__skeleton {
+        @include utils.skeleton;
+        height: 36px;
+        width: 100%;
+
+        &_full-width {
+            width: 100%;
+        }
+    }
+}
+

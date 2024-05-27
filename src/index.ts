@@ -24,6 +24,7 @@ export {
 export { Button } from './components/Button';
 export { Divider } from './components/Divider';
 export { Icon } from './components/Icon';
+export { Input } from './components/Input';
 export { SanitizedHtml } from './components/SanitizedHtml';
 /** Types */
 export type {
