@@ -174,7 +174,6 @@
     &__skeleton {
         @include utils.skeleton();
         height: 36px;
-        border: 2px solid transparent;
         width: 150px;
 
         &_full-width {
