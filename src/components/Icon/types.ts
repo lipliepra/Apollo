@@ -1,4 +1,5 @@
 import {
+    type TFunc,
     type TIcon,
     type TNullable,
     type TRef,
@@ -9,6 +10,8 @@ export interface IIconProps {
     path: TNullable<TIcon>;
     /** Уникальный идентификатор для тестов */
     dataTestId: string;
+    /** Функция, вызываемая при клике на компонент */
+    onClick?: TFunc;
     /** Флаг, определяющий активное состояние  */
     isActive?: boolean;
     /** Флаг, определяющий состояние загрузки  */

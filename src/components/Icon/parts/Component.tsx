@@ -9,6 +9,7 @@ export const Component: FC<IIconProps> = ({
     isActive = false,
     isLoading = false,
     isLarge = false,
+    onClick,
     withMarginLeft = false,
     withMarginRight = false,
     className = '',
@@ -30,6 +31,7 @@ export const Component: FC<IIconProps> = ({
         <span
             className={generatedClassNames}
             data-test-id={`${dataTestId}Icon`}
+            onClick={onClick}
             ref={reactRef}
         >
             <IconElem />
