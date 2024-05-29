@@ -22,6 +22,7 @@ export {
 } from './constants';
 /** Components */
 export { Button } from './components/Button';
+export { ControlWrapper } from './components/ControlWrapper';
 export { Divider } from './components/Divider';
 export { Icon } from './components/Icon';
 export { Input } from './components/Input';
