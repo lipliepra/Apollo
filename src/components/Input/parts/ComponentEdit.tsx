@@ -11,6 +11,10 @@ import { ICONS } from '../../../assets';
 import { type TFunc } from '../../../types';
 import { generateCLassNames } from '../../../utils/generateClassNames';
 import { Icon } from '../../Icon';
+import {
+    getIsShowClearIcon,
+    getIsShowViewIcon,
+} from '../utils';
 import { type IInputProps } from '../types';
 
 export const ComponentEdit: FC<IInputProps> = ({
@@ -87,7 +91,7 @@ export const ComponentEdit: FC<IInputProps> = ({
                     : 'text'}
             />
 
-            {Boolean(localValue) && type === 'password' && (
+            {getIsShowViewIcon(localValue, type) && (
                 <Icon
                     className='apollo-input__icon-view'
                     dataTestId={`${dataTestId}ViewInput`}
@@ -98,7 +102,7 @@ export const ComponentEdit: FC<IInputProps> = ({
                 />
             )}
 
-            {Boolean(localValue) && !isDisabled && (
+            {getIsShowClearIcon(localValue, isDisabled) && (
                 <Icon
                     className='apollo-input__icon-clear'
                     dataTestId={`${dataTestId}ClearInput`}

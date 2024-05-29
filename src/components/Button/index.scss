@@ -7,12 +7,12 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     border-radius: var(--apollo-border-radius-primary);
     user-select: none;
     touch-action: manipulation;
     cursor: pointer;
-    padding: 4px 10px;
+    padding: 5px 10px;
     transition: 0.3s;
     @include text(typography.$fs-button);
 
@@ -65,7 +65,7 @@
 
         &_tertiary {
             background: none;
-            color: var(--apollo-color-font-link);
+            color: var(--apollo-color-font-primary);
 
             &:hover {
                 color: var(--apollo-brand);
@@ -84,7 +84,7 @@
             }
 
             &:focus-visible {
-                border-color: var(--apollo-color-font-link);
+                border-color: var(--apollo-brand);
             }
         }
 
@@ -144,7 +144,7 @@
         }
 
         &_no-content {
-            padding: 4px;
+            padding: 6px;
         }
 
         &_full-width {
@@ -161,12 +161,9 @@
                 fill: var(--apollo-color-icon-alternative);
             }
 
-            &_secondary {
-                fill: var(--apollo-color-icon-primary);
-            }
-
+            &_secondary,
             &_tertiary {
-                fill: var(--apollo-color-font-link);
+                fill: var(--apollo-color-icon-primary);
             }
         }
     }
