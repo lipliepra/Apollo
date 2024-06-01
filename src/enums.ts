@@ -21,11 +21,9 @@ export enum RuntimeStatuses {
  * - Positive: Успех
  * - Negative: Ошибка.
  * - Warning: Предпуреждение.
- * - Process: В процессе.
  */
 export enum InfoStatuses {
     Positive = 'positive',
     Negative = 'negative',
     Warning = 'warning',
-    Process = 'process',
 }
