@@ -14,6 +14,7 @@ export const ControlWrapper: CFC<IControlWrapperProps> = ({
 }) => (
     <div
         className={cn('apollo-control-wrapper', className)}
+        data-component='apollo-component'
         data-test-id={`${dataTestId}ControlWrapper`}
         ref={reactRef}
         role='group'

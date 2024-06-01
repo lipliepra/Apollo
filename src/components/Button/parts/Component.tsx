@@ -41,10 +41,12 @@ export const Component: FC<IButtonProps> = ({
     return (
         <button
             className={generatedCls}
+            data-component='apollo-component'
             data-test-id={`${dataTestId}Button`}
             disabled={isDisabled || isLoading}
             onClick={onClick}
             ref={reactRef}
+
         >
             <IconPrefix
                 {...commonIconProps}

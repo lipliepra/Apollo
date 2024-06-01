@@ -48,6 +48,7 @@ export const ComponentView: FC<IInputWithModeProps> = ({
             {withHiddenValue && Boolean(value) && (
                 <Icon
                     className='apollo-input__view-icon'
+                    data-component='apollo-component'
                     dataTestId={`${dataTestId}Hide`}
                     onClick={() => { setIsValueHidden(!isValueHidden); }}
                     path={isValueHidden

@@ -30,6 +30,7 @@ export const Component: FC<IIconProps> = ({
     return (
         <span
             className={generatedClassNames}
+            data-component='apollo-component'
             data-test-id={`${dataTestId}Icon`}
             onClick={onClick}
             ref={reactRef}

@@ -78,6 +78,7 @@ export const ComponentEdit: FC<IInputProps> = ({
         <div className={generatedWrapperCls}>
             <input
                 className={generatedCls}
+                data-component='apollo-component'
                 data-test-id={`${dataTestId}Input`}
                 disabled={isDisabled}
                 onBlur={onBlur}
