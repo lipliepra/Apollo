@@ -1,5 +1,15 @@
-@mixin media($width: var(--apollo-desktop-breakpoint)) {
-    @media screen and (max-width: #{$width - 1}px) {
+@mixin mediaMobile() {
+    $media-breakpoint-mobile: 768;
+
+    @media screen and (max-width: #{$media-breakpoint-mobile - 1}px) {
+        @content;
+    }
+}
+
+@mixin mediaDesktop() {
+    $media-breakpoint-desktop: 1224;
+
+    @media screen and (max-width: #{$media-breakpoint-desktop - 1}px) {
         @content;
     }
 }

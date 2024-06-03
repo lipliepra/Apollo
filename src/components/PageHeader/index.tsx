@@ -1,5 +1,6 @@
 import cn from 'classnames';
 
+import { useAdaptive } from '../../hooks/useAdaptive';
 import { type CFC } from '../../types';
 import {
     Text,
@@ -15,38 +16,44 @@ export const PageHeader: CFC<IPageHeaderProps> = ({
     description = '',
     reactRef = null,
     children,
-}) => (
-    <div
-        className={cn('apollo-page-header', className)}
-        data-component='apollo-component'
-        data-test-id={`${dataTestId}PageHeader`}
-        ref={reactRef}
-    >
-        <div className='apollo-page-header__wrapper'>
-            <Text
-                className='apollo-page-header__title'
-                dataTestId={`${dataTestId}PageHeaderTitle`}
-                pattern={TextPatterns.H1}
-            >
-                {title}
-            </Text>
+}) => {
+    const { isMobile } = useAdaptive();
 
-            <Text
-                className='apollo-page-header__title'
-                dataTestId={`${dataTestId}PageHeaderDescription`}
-                pattern={TextPatterns.Label}
-            >
-                {description}
-            </Text>
-        </div>
+    return (
+        <div
+            className={cn('apollo-page-header', className)}
+            data-component='apollo-component'
+            data-test-id={`${dataTestId}PageHeader`}
+            ref={reactRef}
+        >
+            <div className='apollo-page-header__wrapper'>
+                <Text
+                    className='apollo-page-header__title'
+                    dataTestId={`${dataTestId}PageHeaderTitle`}
+                    pattern={isMobile
+                        ? TextPatterns.H2
+                        : TextPatterns.H1}
+                >
+                    {title}
+                </Text>
 
-        {children && (
-            <div
-                className={cn('apollo-page-header__content')}
-                data-test-id={`${dataTestId}Content`}
-            >
-                {children}
+                <Text
+                    className='apollo-page-header__title'
+                    dataTestId={`${dataTestId}PageHeaderDescription`}
+                    pattern={TextPatterns.Label}
+                >
+                    {description}
+                </Text>
             </div>
-        )}
-    </div>
-);
+
+            {children && (
+                <div
+                    className={cn('apollo-page-header__content')}
+                    data-test-id={`${dataTestId}Content`}
+                >
+                    {children}
+                </div>
+            )}
+        </div>
+    );
+};
