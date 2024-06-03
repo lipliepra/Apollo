@@ -1,6 +1,10 @@
 import cn from 'classnames';
 
 import { type CFC } from '../../types';
+import {
+    Text,
+    TextPatterns,
+} from '../Text';
 import { type IControlWrapperProps } from './types';
 
 export const ControlWrapper: CFC<IControlWrapperProps> = ({
@@ -19,18 +23,25 @@ export const ControlWrapper: CFC<IControlWrapperProps> = ({
         ref={reactRef}
         role='group'
     >
-        <label className='apollo-control-wrapper__label'>
-            <span className='apollo-control-wrapper__label-text'>
-                {label}
+        <Text
+            dataTestId={`${dataTestId}ControlWrapper`}
+            pattern={TextPatterns.Label}
+        >
+            {label}
 
-                {!isRequired && ' (необязательно)'}
-            </span>
-        </label>
+            {!isRequired && ' (необязательно)'}
+        </Text>
 
         <div className='apollo-control-wrapper__content'>
             {children}
 
-            {!!errorMessage && <span className='apollo-control-wrapper__error-message'>{errorMessage}</span>}
+            <Text
+                className='apollo-control-wrapper__error-message'
+                dataTestId={`${dataTestId}ControlWrapper`}
+                pattern={TextPatterns.Negative}
+            >
+                {Boolean(errorMessage) && errorMessage}
+            </Text>
         </div>
     </div>
 );

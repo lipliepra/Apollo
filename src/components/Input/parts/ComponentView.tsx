@@ -6,6 +6,7 @@ import {
 import { ICONS } from '../../../assets';
 import { generateCLassNames } from '../../../utils/generateClassNames';
 import { Icon } from '../../Icon';
+import { Text } from '../../Text';
 import { type IInputWithModeProps } from '../types';
 
 export const ComponentView: FC<IInputWithModeProps> = ({
@@ -43,7 +44,12 @@ export const ComponentView: FC<IInputWithModeProps> = ({
 
     return (
         <div className={generatedCls}>
-            <span className={generatedTextCls}>{renderValue()}</span>
+            <Text
+                className={generatedTextCls}
+                dataTestId={`${dataTestId}ViewText`}
+            >
+                {renderValue()}
+            </Text>
 
             {withHiddenValue && Boolean(value) && (
                 <Icon

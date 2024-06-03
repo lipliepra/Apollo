@@ -1,0 +1,8 @@
+@use '../../scss/variables/typography';
+@import '../../scss/mixins/typography';
+
+@each $fs in map-keys(typography.$font-styles) {
+    .apollo-text-#{$fs} {
+        @include text($fs);
+    }
+}

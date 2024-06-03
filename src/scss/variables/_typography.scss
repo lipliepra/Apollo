@@ -11,7 +11,6 @@ $fs-h3: 'h3';
 $fs-h4: 'h4';
 $fs-h5: 'h5';
 $fs-body: 'body';
-$fs-button: 'button';
 $fs-label: 'label';
 $fs-helper: 'helper';
 $fs-negative: 'negative';
@@ -29,7 +28,6 @@ $font-styles: (
     h4: (600, var(--apollo-color-font-primary), 2),
     h5: (600, var(--apollo-color-font-primary), 1),
     body: (400, var(--apollo-color-font-primary), 3),
-    button: (400, var(--apollo-color-font-primary), 3),
     label: (400, var(--apollo-color-font-secondary), 2),
     helper: (400, var(--apollo-color-font-tertiary), 3),
     positive: (400, var(--apollo-color-status-positive), 2),

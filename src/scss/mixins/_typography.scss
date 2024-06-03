@@ -13,4 +13,10 @@
     color: $color;
     font-size: #{nth($params, 1)}px;
     line-height: #{nth($params, 2)}px;
+
+    @if ($style == typography.$fs-link) {
+        &:hover {
+            color: var(--apollo-color-font-link-hover);
+        }
+    }
 }

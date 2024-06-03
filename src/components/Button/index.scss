@@ -14,7 +14,7 @@
     cursor: pointer;
     padding: 5px 10px;
     transition: 0.3s;
-    @include text(typography.$fs-button);
+    @include text(typography.$fs-body);
 
     &:focus {
         outline: none;

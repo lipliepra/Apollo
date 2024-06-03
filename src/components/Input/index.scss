@@ -51,29 +51,32 @@
         }
     }
 
-    &__icon {
-        &-clear {
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translateY(7px) translateX(-5px);
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-
-        &-view {
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translateY(7px) translateX(-37px);
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-    }
-
     &__wrapper {
         width: 100%;
         position: relative;
+
+        & .apollo-input {
+            &__icon {
+                &-clear {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translateY(7px) translateX(-5px);
+                    cursor: pointer;
+                    flex-shrink: 0;
+                }
+
+                &-view {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translateY(7px) translateX(-37px);
+                    cursor: pointer;
+                    flex-shrink: 0;
+                }
+            }
+
+        }
     }
 
     &__view {
