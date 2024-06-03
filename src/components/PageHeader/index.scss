@@ -1,0 +1,37 @@
+.apollo-page-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+
+    & & {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+        }
+
+        &__description {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: flex-end;
+            flex-shrink: 0;
+            flex-grow: 1;
+            gap: 16px;
+        }
+    }
+}

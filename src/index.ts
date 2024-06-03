@@ -26,7 +26,12 @@ export { ControlWrapper } from './components/ControlWrapper';
 export { Divider } from './components/Divider';
 export { Icon } from './components/Icon';
 export { Input } from './components/Input';
+export { PageHeader } from './components/PageHeader';
 export { SanitizedHtml } from './components/SanitizedHtml';
+export {
+    Text,
+    TextPatterns,
+} from './components/Text';
 /** Types */
 export type {
     CFC,
