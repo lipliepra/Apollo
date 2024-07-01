@@ -50,11 +50,13 @@
             border-color: var(--apollo-color-border-primary);
 
             &:hover {
-                background-color: var(--apollo-color-background-primary);
+                background-color: var(--apollo-color-background-tertiary);
+                border-color: var(--apollo-color-background-tertiary);
             }
 
             &:active {
                 background-color: var(--apollo-color-background-tertiary);
+                border-color: var(--apollo-color-border-primary);
             }
 
             &:focus-visible {

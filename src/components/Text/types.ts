@@ -4,7 +4,7 @@ import { type TRef } from '../../types';
 import { type TextPatterns } from './enums';
 
 export interface ITextProps {
-    dataTestId: string;
+    dataTestId?: string;
     pattern?: TextPatterns;
     tagName?: TTagName;
     className?: string;

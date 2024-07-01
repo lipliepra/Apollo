@@ -60,6 +60,9 @@ export const ComponentEdit: FC<IInputProps> = ({
         className,
     });
 
+    const isShowViewIcon = getIsShowViewIcon(localValue, isDisabled, type);
+    const isShowClearIcon = getIsShowClearIcon(localValue, isDisabled);
+
     const debounceHandler = useCallback(_debounce((value: string) => { onChange(value); }, 300), []);
 
     const onChangeHandler: TFunc<[ChangeEvent<HTMLInputElement>]> = (event) => {
@@ -92,7 +95,7 @@ export const ComponentEdit: FC<IInputProps> = ({
                     : 'text'}
             />
 
-            {getIsShowViewIcon(localValue, type) && (
+            {isShowViewIcon && (
                 <Icon
                     className='apollo-input__icon-view'
                     dataTestId={`${dataTestId}ViewInput`}
@@ -103,7 +106,7 @@ export const ComponentEdit: FC<IInputProps> = ({
                 />
             )}
 
-            {getIsShowClearIcon(localValue, isDisabled) && (
+            {isShowClearIcon && (
                 <Icon
                     className='apollo-input__icon-clear'
                     dataTestId={`${dataTestId}ClearInput`}
