@@ -18,7 +18,7 @@ export const Text: CFC<ITextProps> = ({
     if (!children) return null;
 
     return createElement(tagName, {
-        'data-test-id': `${dataTestId}Text`,
+        ...(dataTestId && { 'data-test-id': `${dataTestId}Text` }),
         'data-component': 'apollo-component',
         ref: reactRef,
         style,
