@@ -27,6 +27,8 @@ export { Divider } from './components/Divider';
 export { Icon } from './components/Icon';
 export { Input } from './components/Input';
 export { PageHeader } from './components/PageHeader';
+export { Panel } from './components/Panel';
+export { PanelHeader } from './components/PanelHeader';
 export { SanitizedHtml } from './components/SanitizedHtml';
 export {
     Text,

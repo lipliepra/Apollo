@@ -1,0 +1,18 @@
+@use '../../src/scss/mixins/typography';
+@use '../../src/scss/mixins/utils';
+@import '../../src/scss/variables/typography';
+@import 'normalize';
+@import 'grid';
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    @include utils.custom-scrollbar;
+    @include typography.text($fs-body);
+    background-color: var(--apollo-color-background-primary);
+    height: 100%;
+    overflow-x: hidden;
+}

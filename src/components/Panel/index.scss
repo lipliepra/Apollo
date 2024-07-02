@@ -1,0 +1,9 @@
+.apollo-panel {
+    padding: 20px;
+    border-radius: var(--apollo-border-radius-primary);
+    background-color: var(--apollo-color-background-secondary);
+    box-shadow: var(--apollo-shadow-primary);
+    width: 100%;
+    transition: 0.3s;
+    align-self: self-start;
+}

@@ -1,0 +1,27 @@
+@use '../../scss/mixins/media';
+
+.apollo-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+
+    @include media.mediaMobile() {
+        flex-direction: column;
+    }
+
+    &.apollo-panel-header {
+        &_with-bottom-border {
+            border-bottom: 1px solid var(--apollo-color-border-secondary);
+            padding-bottom: 20px;
+        }
+    }
+
+    & & {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+}

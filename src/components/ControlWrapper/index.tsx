@@ -7,6 +7,7 @@ import {
 } from '../Text';
 import { type IControlWrapperProps } from './types';
 
+/** Компонент обертки */
 export const ControlWrapper: CFC<IControlWrapperProps> = ({
     label,
     children,

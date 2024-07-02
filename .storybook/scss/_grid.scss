@@ -1,0 +1,63 @@
+@use '../../src/scss/mixins/typography';
+@use '../../src/scss/mixins/media';
+@use '../../src/scss/mixins/utils';
+@import '../../src/scss/variables/_typography.scss';
+
+h1 {
+    @include typography.text($fs-h1);
+
+    @include media.mediaMobile() {
+        @include typography.text($fs-h2);
+    }
+}
+
+h2 {
+    @include typography.text($fs-h2);
+
+    @include media.mediaMobile() {
+        @include typography.text($fs-h3);
+    }
+}
+
+h3 {
+    @include typography.text($fs-h3);
+
+    @include media.mediaMobile() {
+        @include typography.text($fs-h4);
+    }
+}
+
+h4 {
+    @include typography.text($fs-h4);
+
+    @include media.mediaMobile() {
+        @include typography.text($fs-h5);
+    }
+}
+
+h5 {
+    @include typography.text($fs-h5);
+}
+
+a {
+    @include typography.text($fs-link);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    flex: 1 1 auto;
+    padding: 40px 20px;
+
+    @include media.mediaMobile() {
+        padding: 30px 20px 40px;
+    }
+}
+
+.scroll-hidden {
+    overflow-y: hidden;
+    touch-action: none;
+}
