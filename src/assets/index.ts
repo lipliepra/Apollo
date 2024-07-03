@@ -28,6 +28,7 @@ import EmptyImage from './icons/svg/emptyImage.svg';
 import EyeClose from './icons/svg/eyeClose.svg';
 import EyeOpen from './icons/svg/eyeOpen.svg';
 import Filter from './icons/svg/filter.svg';
+import Gear from './icons/svg/gear.svg';
 import Home from './icons/svg/home.svg';
 import Info from './icons/svg/info.svg';
 import Link from './icons/svg/link.svg';
@@ -35,6 +36,7 @@ import Loader from './icons/svg/loader.svg';
 import Map from './icons/svg/map.svg';
 import Minus from './icons/svg/minus.svg';
 import PaperPlane from './icons/svg/paperPlane.svg';
+import Pencil from './icons/svg/pencil.svg';
 import Plus from './icons/svg/plus.svg';
 import Question from './icons/svg/question.svg';
 import Reply from './icons/svg/reply.svg';
@@ -89,6 +91,7 @@ export const ICONS = {
     EyeClose,
     EyeOpen,
     Filter,
+    Gear,
     Home,
     Info,
     Link,
@@ -96,6 +99,7 @@ export const ICONS = {
     Map,
     Minus,
     PaperPlane,
+    Pencil,
     Plus,
     Question,
     Reply,
