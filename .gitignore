@@ -1,10 +1,7 @@
-.idea
-node_modules
-dist
-.eslintrc
-.eslintignore
-editorConfig.xml
-babel.config.json
-package-lock.json
-
-*storybook.log
+.idea/
+node_modules/
+dist/
+artifacts/
+playground-dist/
+*.log
+.DS_Store

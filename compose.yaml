@@ -1,0 +1,12 @@
+services:
+  playground:
+    build:
+      context: .
+      target: development
+    ports:
+      - "127.0.0.1:6006:6006"
+    volumes:
+      - ./src:/app/src:ro
+      - ./playground:/app/playground:ro
+      - ./vite.playground.config.ts:/app/vite.playground.config.ts:ro
+    init: true

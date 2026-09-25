@@ -1,8 +1,0 @@
-@use './variables/colors';
-
-/** Default colors */
-:root {
-    @each $key, $value in colors.$colorsList {
-        --apollo-#{$key}: #{$value};
-    }
-}
