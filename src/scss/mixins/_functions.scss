@@ -1,0 +1,5 @@
+@use 'sass:color';
+
+@function changeColorOpacity($name, $opacity) {
+    @return color.change($name, $alpha: $opacity);
+}

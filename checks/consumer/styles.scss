@@ -1,0 +1,16 @@
+@use '@d.story/apollo-ui/scss/mixins/utils';
+@use '@d.story/apollo-ui/scss/mixins/typography';
+@use '@d.story/apollo-ui/scss/mixins/functions';
+@use '@d.story/apollo-ui/scss/variables/colors';
+@use '@d.story/apollo-ui/scss/variables/fonts';
+
+.consumer-card {
+    @include typography.text(typography.$fs-primary);
+    @include utils.border-top-radius();
+    background: functions.changeColorOpacity(colors.$color-orange-5, .2);
+    --consumer-font: #{fonts.$font-family-primary};
+
+    @include utils.mediaMobile() {
+        padding: 8px;
+    }
+}

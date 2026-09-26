@@ -1,0 +1,108 @@
+@use './mixins/typography';
+@use './mixins/utils';
+
+h1 {
+    @include typography.text(typography.$fs-h1);
+    @include utils.mediaMobile() {
+        @include typography.text(typography.$fs-h2);
+    }
+}
+
+h2 {
+    @include typography.text(typography.$fs-h2);
+    @include utils.mediaMobile() {
+        @include typography.text(typography.$fs-h3);
+    }
+}
+
+h3 {
+    @include typography.text(typography.$fs-h3);
+    @include utils.mediaMobile() {
+        @include typography.text(typography.$fs-h4);
+    }
+}
+
+h4 {
+    @include typography.text(typography.$fs-h4);
+    @include utils.mediaMobile() {
+        @include typography.text(typography.$fs-h5);
+    }
+}
+
+h5 {
+    @include typography.text(typography.$fs-h5);
+}
+
+a {
+    @include typography.text(typography.$fs-link);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+// Apply to body only while scroll is locked (future useDisableScroll migration).
+.apollo-scroll-hidden {
+    overflow-y: hidden;
+    touch-action: none;
+}
+
+.apollo-rich-text {
+    @include typography.text(typography.$fs-primary);
+
+    // Explicit element styles keep rich text independent of the document reset.
+    @for $level from 1 through 5 {
+        h#{$level} {
+            @include typography.text('h#{$level}');
+            margin: 0;
+        }
+    }
+
+    h1 {
+        margin-bottom: 16px;
+
+        @include utils.mediaMobile() {
+            @include typography.text(typography.$fs-h2);
+        }
+    }
+
+    h4 {
+        @include utils.mediaMobile() {
+            @include typography.text(typography.$fs-h5);
+        }
+    }
+
+    a {
+        @include typography.text(typography.$fs-link);
+        text-decoration: none;
+    }
+
+    h2 {
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        margin-bottom: 8px;
+    }
+
+    h1, h2, h3 {
+        padding-top: 8px;
+    }
+
+    p {
+        margin: 0 0 8px;
+    }
+
+    pre {
+        margin: 16px 0;
+        background: var(--apollo-color-background-secondary);
+        padding: 8px;
+        font-size: 16px;
+        border-radius: var(--apollo-border-radius-primary);
+        white-space: pre-wrap;
+    }
+
+    ul,
+    ol {
+        padding: 8px 0 0;
+        margin: 0 0 16px 40px;
+    }
+}

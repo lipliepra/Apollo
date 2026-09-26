@@ -1,0 +1,208 @@
+// Preserve utility priority over component styles, as in the original helpers.
+@use './mixins/typography';
+@use './mixins/utils';
+
+$indentSizes: 0, 2, 4, 8, 12, 16, 20, 24, 28, 30, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100;
+$sizes: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100;
+
+// paddings
+@each $indentSize in $indentSizes {
+    .apollo-pv-#{$indentSize}:not(#fake-id) {
+        padding-top: #{$indentSize}px;
+        padding-bottom: #{$indentSize}px;
+    }
+    .apollo-ph-#{$indentSize}:not(#fake-id) {
+        padding-left: #{$indentSize}px;
+        padding-right: #{$indentSize}px;
+    }
+    .apollo-pt-#{$indentSize}:not(#fake-id) {
+        padding-top: #{$indentSize}px;
+    }
+    .apollo-pb-#{$indentSize}:not(#fake-id) {
+        padding-bottom: #{$indentSize}px;
+    }
+    .apollo-pl-#{$indentSize}:not(#fake-id) {
+        padding-left: #{$indentSize}px;
+    }
+    .apollo-pr-#{$indentSize}:not(#fake-id) {
+        padding-right: #{$indentSize}px;
+    }
+    .apollo-p-#{$indentSize}:not(#fake-id) {
+        padding: #{$indentSize}px;
+    }
+}
+
+// margins
+.apollo-ml-auto:not(#fake-id) {
+    margin-left: auto;
+}
+
+.apollo-mr-auto:not(#fake-id) {
+    margin-right: auto;
+}
+
+.apollo-mt-auto:not(#fake-id) {
+    margin-top: auto;
+}
+
+.apollo-mb-auto:not(#fake-id) {
+    margin-bottom: auto;
+}
+
+@each $indentSize in $indentSizes {
+    .apollo-mv-#{$indentSize}:not(#fake-id) {
+        margin-top: #{$indentSize}px;
+        margin-bottom: #{$indentSize}px;
+    }
+    .apollo-mh-#{$indentSize}:not(#fake-id) {
+        margin-left: #{$indentSize}px;
+        margin-right: #{$indentSize}px;
+    }
+    .apollo-mt-#{$indentSize}:not(#fake-id) {
+        margin-top: #{$indentSize}px;
+    }
+    .apollo-mb-#{$indentSize}:not(#fake-id) {
+        margin-bottom: #{$indentSize}px;
+    }
+    .apollo-ml-#{$indentSize}:not(#fake-id) {
+        margin-left: #{$indentSize}px;
+    }
+    .apollo-mr-#{$indentSize}:not(#fake-id) {
+        margin-right: #{$indentSize}px;
+    }
+    .apollo-m-#{$indentSize}:not(#fake-id) {
+        margin: #{$indentSize}px;
+    }
+}
+
+// width / height
+.apollo-w-auto:not(#fake-id) {
+    width: auto;
+}
+
+.apollo-w-max:not(#fake-id) {
+    width: max-content;
+}
+
+.apollo-w-min:not(#fake-id) {
+    width: min-content;
+}
+
+.apollo-w-fit:not(#fake-id) {
+    width: fit-content;
+}
+
+@each $size in $sizes {
+    $value: '#{$size}%';
+    .apollo-mw-#{$size}p:not(#fake-id) {
+        max-width: #{$value};
+    }
+    .apollo-mh-#{$size}p:not(#fake-id) {
+        max-height: #{$value};
+    }
+    .apollo-w-#{$size}p:not(#fake-id) {
+        width: #{$value};
+    }
+    .apollo-h-#{$size}p:not(#fake-id) {
+        height: #{$value};
+    }
+}
+
+.apollo-h-36px:not(#fake-id) {
+    height: 36px;
+}
+
+// flex
+.apollo-d-flex:not(#fake-id) {
+    display: flex;
+}
+
+.apollo-fdc:not(#fake-id) {
+    flex-direction: column;
+}
+
+.apollo-fdr:not(#fake-id) {
+    flex-direction: row;
+}
+
+.apollo-aic:not(#fake-id) {
+    align-items: center;
+}
+
+.apollo-aifs:not(#fake-id) {
+    align-items: flex-start;
+}
+
+.apollo-aife:not(#fake-id) {
+    align-items: flex-end;
+}
+
+.apollo-jcsb:not(#fake-id) {
+    justify-content: space-between;
+}
+
+.apollo-jcsa:not(#fake-id) {
+    justify-content: space-around;
+}
+
+.apollo-jcc:not(#fake-id) {
+    justify-content: center;
+}
+
+.apollo-jcfs:not(#fake-id) {
+    justify-content: flex-start;
+}
+
+.apollo-jcfe:not(#fake-id) {
+    justify-content: flex-end;
+}
+
+.apollo-flex-grow-1:not(#fake-id) {
+    flex-grow: 1;
+}
+
+// grid
+.apollo-d-grid:not(#fake-id) {
+    display: grid;
+}
+
+@for $columns from 1 through 8 {
+    .apollo-gtc-#{$columns}:not(#fake-id) {
+        grid-template-columns: repeat($columns, 1fr);
+
+        @include utils.mediaDesktop() {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .apollo-gtc-#{$columns}-extra:not(#fake-id) {
+        grid-template-columns: repeat($columns, 1fr);
+
+        @include utils.mediaDesktop() {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include utils.mediaMobile() {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+// gap
+@each $indentSize in $indentSizes {
+    .apollo-gap-#{$indentSize}:not(#fake-id) {
+        gap: #{$indentSize}px;
+    }
+}
+
+// fs
+@each $variant, $definition in typography.$font-styles {
+    .apollo-fs-#{$variant}:not(#fake-id) {
+        @include typography.text($variant);
+    }
+}
+
+// other
+.apollo-cur-pointer:not(#fake-id) {
+    cursor: pointer;
+}

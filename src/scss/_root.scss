@@ -1,0 +1,41 @@
+@use './variables/colors';
+@use './variables/fonts';
+
+/** Default parameters */
+:root {
+    /** Base colors */
+    --apollo-color-base-white: #{colors.$color-white};
+    --apollo-color-base-black: #{colors.$color-black};
+
+    /** Theme swatches */
+    --apollo-color-theme-dark: #{colors.$color-grey-9};
+    --apollo-color-theme-light: #{colors.$color-grey-4};
+
+    /** Brand swatches */
+    --apollo-color-brand-orange: #{colors.$color-orange-5};
+    --apollo-color-brand-magenta: #{colors.$color-magenta-6};
+    --apollo-color-brand-teal: #{colors.$color-teal-6};
+
+    /** Tag colors */
+    --apollo-color-tag-grey: #{colors.$color-grey-6};
+    --apollo-color-tag-blue: #{colors.$color-blue-6};
+    --apollo-color-tag-red: #{colors.$color-red-6};
+    --apollo-color-tag-green: #{colors.$color-green-5};
+    --apollo-color-tag-orange: #{colors.$color-orange-5};
+    --apollo-color-tag-purple: #{colors.$color-purple-6};
+    --apollo-color-tag-teal: #{colors.$color-teal-6};
+    --apollo-color-tag-magenta: #{colors.$color-magenta-6};
+    --apollo-color-tag-yellow: #{colors.$color-yellow-5};
+
+    /** Font family */
+    --apollo-font-family-primary: #{fonts.$font-family-primary};
+    --apollo-font-family-secondary: #{fonts.$font-family-secondary};
+    --apollo-font-family-default: #{fonts.$font-family-default};
+
+    /** Shadow */
+    --apollo-shadow-primary: 1px 1px 4px 1px var(--apollo-color-shadow-primary);
+
+    /** Border-radius */
+    --apollo-border-radius-primary: 8px;
+    --apollo-border-radius-secondary: 4px;
+}

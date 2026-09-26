@@ -1,0 +1,103 @@
+@use '../variables/colors';
+@use '../mixins/functions';
+
+// Text
+$apollo-color-font-primary: colors.$color-grey-9;
+$apollo-color-font-secondary: colors.$color-grey-6;
+$apollo-color-font-tertiary: colors.$color-grey-5;
+$apollo-color-font-disabled: colors.$color-grey-3;
+$apollo-color-font-alternative: colors.$color-grey-1;
+$apollo-color-font-link: colors.$color-blue-6;
+$apollo-color-font-link-hover: colors.$color-blue-7;
+
+// Background
+$apollo-color-background-primary: colors.$color-grey-1;
+$apollo-color-background-secondary: colors.$color-white;
+
+// Icon
+$apollo-color-icon-primary: colors.$color-grey-9;
+$apollo-color-icon-secondary: colors.$color-grey-6;
+$apollo-color-icon-tertiary: colors.$color-grey-5;
+$apollo-color-icon-alternative: colors.$color-white;
+
+// Border
+$apollo-color-border-primary: colors.$color-grey-4;
+$apollo-color-border-secondary: colors.$color-grey-3;
+
+// Divider
+$apollo-color-divider-primary: colors.$color-grey-2;
+
+// Status
+$apollo-color-status-positive-primary: colors.$color-green-6;
+$apollo-color-status-positive-secondary: colors.$color-green-7;
+$apollo-color-status-positive-tertiary: colors.$color-green-2;
+
+$apollo-color-status-negative-primary: colors.$color-red-6;
+$apollo-color-status-negative-secondary: colors.$color-red-7;
+$apollo-color-status-negative-tertiary: colors.$color-red-2;
+
+$apollo-color-status-warning-primary: colors.$color-yellow-6;
+$apollo-color-status-warning-secondary: colors.$color-yellow-2;
+$apollo-color-status-warning-tertiary: colors.$color-yellow-4;
+
+// Shadow
+$apollo-color-shadow-primary: functions.changeColorOpacity(colors.$color-grey-9, .20);
+
+// Overlay
+$apollo-color-overlay-primary: functions.changeColorOpacity(colors.$color-grey-9, .50);
+
+// Skeleton
+$apollo-color-skeleton-primary: colors.$color-grey-2;
+$apollo-color-skeleton-secondary: colors.$color-grey-1;
+
+/** Light theme — explicit opt-in via data-theme. */
+:root[data-theme='light'] {
+    /** Text */
+    --apollo-color-font-primary: #{$apollo-color-font-primary};
+    --apollo-color-font-secondary: #{$apollo-color-font-secondary};
+    --apollo-color-font-tertiary: #{$apollo-color-font-tertiary};
+    --apollo-color-font-disabled: #{$apollo-color-font-disabled};
+    --apollo-color-font-alternative: #{$apollo-color-font-alternative};
+    --apollo-color-font-link: #{$apollo-color-font-link};
+    --apollo-color-font-link-hover: #{$apollo-color-font-link-hover};
+
+    /** Background */
+    --apollo-color-background-primary: #{$apollo-color-background-primary};
+    --apollo-color-background-secondary: #{$apollo-color-background-secondary};
+
+    /** Icon */
+    --apollo-color-icon-primary: #{$apollo-color-icon-primary};
+    --apollo-color-icon-secondary: #{$apollo-color-icon-secondary};
+    --apollo-color-icon-tertiary: #{$apollo-color-icon-tertiary};
+    --apollo-color-icon-alternative: #{$apollo-color-icon-alternative};
+
+    /** Border */
+    --apollo-color-border-primary: #{$apollo-color-border-primary};
+    --apollo-color-border-secondary: #{$apollo-color-border-secondary};
+
+    /** Divider */
+    --apollo-color-divider-primary: #{$apollo-color-divider-primary};
+
+    /** Status */
+    --apollo-color-status-positive-primary: #{$apollo-color-status-positive-primary};
+    --apollo-color-status-positive-secondary: #{$apollo-color-status-positive-secondary};
+    --apollo-color-status-positive-tertiary: #{$apollo-color-status-positive-tertiary};
+
+    --apollo-color-status-negative-primary: #{$apollo-color-status-negative-primary};
+    --apollo-color-status-negative-secondary: #{$apollo-color-status-negative-secondary};
+    --apollo-color-status-negative-tertiary: #{$apollo-color-status-negative-tertiary};
+
+    --apollo-color-status-warning-primary: #{$apollo-color-status-warning-primary};
+    --apollo-color-status-warning-secondary: #{$apollo-color-status-warning-secondary};
+    --apollo-color-status-warning-tertiary: #{$apollo-color-status-warning-tertiary};
+
+    /** Shadow */
+    --apollo-color-shadow-primary: #{$apollo-color-shadow-primary};
+
+    /** Overlay */
+    --apollo-color-overlay-primary: #{$apollo-color-overlay-primary};
+
+    /** Skeleton */
+    --apollo-color-skeleton-primary: #{$apollo-color-skeleton-primary};
+    --apollo-color-skeleton-secondary: #{$apollo-color-skeleton-secondary};
+}

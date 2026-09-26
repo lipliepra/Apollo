@@ -3,7 +3,8 @@
     "compilerOptions": {
         "paths": {
             "@d.story/apollo-ui": ["../../src/index.ts"],
-            "@d.story/apollo-ui/styles.css": ["../../src/styles.css"]
+            "@d.story/apollo-ui/styles.css": ["../../src/styles.scss"],
+            "@d.story/apollo-ui/reset.css": ["../../src/reset.scss"]
         }
     }
 }

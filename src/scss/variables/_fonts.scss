@@ -1,0 +1,4 @@
+// Font files and @font-face are supplied by the consumer.
+$font-family-default: 'Helvetica Neue', sans-serif !default;
+$font-family-secondary: 'Inter', $font-family-default !default;
+$font-family-primary: 'Gilroy', $font-family-secondary !default;

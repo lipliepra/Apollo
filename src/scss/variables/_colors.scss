@@ -1,0 +1,187 @@
+$color-white: #ffffff;
+$color-black: #000000;
+
+// GREY
+$color-grey-1: #f5f6f7;
+$color-grey-2: #e9ecef;
+$color-grey-3: #dee2e6;
+$color-grey-4: #ced4da;
+$color-grey-5: #adb5bd;
+$color-grey-6: #6c757d;
+$color-grey-7: #495057;
+$color-grey-8: #343a40;
+$color-grey-9: #212529;
+
+// BLUE
+$color-blue-1: #f5fafd;
+$color-blue-2: #e6f1fb;
+$color-blue-3: #a8cfee;
+$color-blue-4: #70b0e3;
+$color-blue-5: #3891d9;
+$color-blue-6: #0072ce;
+$color-blue-7: #02599f;
+$color-blue-8: #054374;
+$color-blue-9: #072b49;
+
+// RED
+$color-red-1: #fdf7f7;
+$color-red-2: #fbeaeb;
+$color-red-3: #efb5b8;
+$color-red-4: #e6868b;
+$color-red-5: #dc565d;
+$color-red-6: #d22730;
+$color-red-7: #a22026;
+$color-red-8: #761a1f;
+$color-red-9: #4a1316;
+
+// GREEN
+$color-green-1: #f5faf7;
+$color-green-2: #e6f3ec;
+$color-green-3: #a8d5bd;
+$color-green-4: #70ba92;
+$color-green-5: #389f68;
+$color-green-6: #00843d;
+$color-green-7: #026630;
+$color-green-8: #054c26;
+$color-green-9: #07311a;
+
+// ORANGE
+$color-orange-1: #fffaf6;
+$color-orange-2: #fef1e7;
+$color-orange-3: #f9c79f;
+$color-orange-4: #f59d57;
+$color-orange-5: #f0730f;
+$color-orange-6: #bb5b0e;
+$color-orange-7: #94490d;
+$color-orange-8: #6d370c;
+$color-orange-9: #45250b;
+
+// PURPLE
+$color-purple-1: #faf8fd;
+$color-purple-2: #f2eefa;
+$color-purple-3: #d2c5ec;
+$color-purple-4: #b6a0df;
+$color-purple-5: #997ad3;
+$color-purple-6: #7d55c7;
+$color-purple-7: #614399;
+$color-purple-8: #483370;
+$color-purple-9: #2f2247;
+
+// TEAL
+$color-teal-1: #f5fafa;
+$color-teal-2: #e6f2f3;
+$color-teal-3: #a8d2d4;
+$color-teal-4: #70b5b8;
+$color-teal-5: #38999c;
+$color-teal-6: #007c80;
+$color-teal-7: #026063;
+$color-teal-8: #05484a;
+$color-teal-9: #072f30;
+
+// MAGENTA
+$color-magenta-1: #fdf7f9;
+$color-magenta-2: #f9ebf1;
+$color-magenta-3: #eabace;
+$color-magenta-4: #dd8eae;
+$color-magenta-5: #d0628f;
+$color-magenta-6: #c3366f;
+$color-magenta-7: #962b56;
+$color-magenta-8: #6e2241;
+$color-magenta-9: #45182a;
+
+// YELLOW
+$color-yellow-1: #fefae9;
+$color-yellow-2: #fbe8a7;
+$color-yellow-3: #f4c522;
+$color-yellow-4: #d0a81e;
+$color-yellow-5: #ae8d1b;
+$color-yellow-6: #8d7217;
+$color-yellow-7: #735e14;
+$color-yellow-8: #5a4a13;
+$color-yellow-9: #403510;
+
+$colorsList: (
+    color-white: $color-white,
+    color-black: $color-black,
+    color-grey-1: $color-grey-1,
+    color-grey-2: $color-grey-2,
+    color-grey-3: $color-grey-3,
+    color-grey-4: $color-grey-4,
+    color-grey-5: $color-grey-5,
+    color-grey-6: $color-grey-6,
+    color-grey-7: $color-grey-7,
+    color-grey-8: $color-grey-8,
+    color-grey-9: $color-grey-9,
+    color-blue-1: $color-blue-1,
+    color-blue-2: $color-blue-2,
+    color-blue-3: $color-blue-3,
+    color-blue-4: $color-blue-4,
+    color-blue-5: $color-blue-5,
+    color-blue-6: $color-blue-6,
+    color-blue-7: $color-blue-7,
+    color-blue-8: $color-blue-8,
+    color-blue-9: $color-blue-9,
+    color-red-1: $color-red-1,
+    color-red-2: $color-red-2,
+    color-red-3: $color-red-3,
+    color-red-4: $color-red-4,
+    color-red-5: $color-red-5,
+    color-red-6: $color-red-6,
+    color-red-7: $color-red-7,
+    color-red-8: $color-red-8,
+    color-red-9: $color-red-9,
+    color-green-1: $color-green-1,
+    color-green-2: $color-green-2,
+    color-green-3: $color-green-3,
+    color-green-4: $color-green-4,
+    color-green-5: $color-green-5,
+    color-green-6: $color-green-6,
+    color-green-7: $color-green-7,
+    color-green-8: $color-green-8,
+    color-green-9: $color-green-9,
+    color-orange-1: $color-orange-1,
+    color-orange-2: $color-orange-2,
+    color-orange-3: $color-orange-3,
+    color-orange-4: $color-orange-4,
+    color-orange-5: $color-orange-5,
+    color-orange-6: $color-orange-6,
+    color-orange-7: $color-orange-7,
+    color-orange-8: $color-orange-8,
+    color-orange-9: $color-orange-9,
+    color-purple-1: $color-purple-1,
+    color-purple-2: $color-purple-2,
+    color-purple-3: $color-purple-3,
+    color-purple-4: $color-purple-4,
+    color-purple-5: $color-purple-5,
+    color-purple-6: $color-purple-6,
+    color-purple-7: $color-purple-7,
+    color-purple-8: $color-purple-8,
+    color-purple-9: $color-purple-9,
+    color-teal-1: $color-teal-1,
+    color-teal-2: $color-teal-2,
+    color-teal-3: $color-teal-3,
+    color-teal-4: $color-teal-4,
+    color-teal-5: $color-teal-5,
+    color-teal-6: $color-teal-6,
+    color-teal-7: $color-teal-7,
+    color-teal-8: $color-teal-8,
+    color-teal-9: $color-teal-9,
+    color-magenta-1: $color-magenta-1,
+    color-magenta-2: $color-magenta-2,
+    color-magenta-3: $color-magenta-3,
+    color-magenta-4: $color-magenta-4,
+    color-magenta-5: $color-magenta-5,
+    color-magenta-6: $color-magenta-6,
+    color-magenta-7: $color-magenta-7,
+    color-magenta-8: $color-magenta-8,
+    color-magenta-9: $color-magenta-9,
+    color-yellow-1: $color-yellow-1,
+    color-yellow-2: $color-yellow-2,
+    color-yellow-3: $color-yellow-3,
+    color-yellow-4: $color-yellow-4,
+    color-yellow-5: $color-yellow-5,
+    color-yellow-6: $color-yellow-6,
+    color-yellow-7: $color-yellow-7,
+    color-yellow-8: $color-yellow-8,
+    color-yellow-9: $color-yellow-9,
+);

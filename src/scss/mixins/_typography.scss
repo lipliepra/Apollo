@@ -1,0 +1,103 @@
+@use 'sass:map';
+@use 'sass:list';
+@use '../variables/fonts';
+
+$fs-xs: 14;
+$fs-s: 16;
+$fs-m: 18;
+$fs-l: 24;
+$fs-xl: 30;
+$fs-xxl: 36;
+
+$fs-h1: 'h1';
+$fs-h2: 'h2';
+$fs-h3: 'h3';
+$fs-h4: 'h4';
+$fs-h5: 'h5';
+
+$fs-primary: 'primary';
+$fs-primary-md: 'primary-md';
+$fs-primary-sm: 'primary-sm';
+
+$fs-secondary: 'secondary';
+$fs-secondary-md: 'secondary-md';
+$fs-secondary-sm: 'secondary-sm';
+
+$fs-tertiary: 'tertiary';
+$fs-tertiary-md: 'tertiary-md';
+$fs-tertiary-sm: 'tertiary-sm';
+
+$fs-link: 'link';
+$fs-link-md: 'link-md';
+$fs-link-sm: 'link-sm';
+
+$fs-negative: 'negative';
+$fs-positive: 'positive';
+$fs-warning: 'warning';
+
+$font-sizes: ((14, 18), (16, 20), (18, 22), (24, 30), (30, 36));
+
+$font-styles: (
+    /** Heading */
+    h1: (600, var(--apollo-color-font-primary), 5),
+    h2: (600, var(--apollo-color-font-primary), 4),
+    h3: (600, var(--apollo-color-font-primary), 3),
+    h4: (600, var(--apollo-color-font-primary), 2),
+    h5: (600, var(--apollo-color-font-primary), 1),
+    /** Primary */
+    primary: (400, var(--apollo-color-font-primary), 3),
+    primary-md: (400, var(--apollo-color-font-primary), 2),
+    primary-sm: (400, var(--apollo-color-font-primary), 1),
+    /** Secondary */
+    secondary: (400, var(--apollo-color-font-secondary), 3),
+    secondary-md: (400, var(--apollo-color-font-secondary), 2),
+    secondary-sm: (400, var(--apollo-color-font-secondary), 1),
+    /** Tertiary */
+    tertiary: (400, var(--apollo-color-font-tertiary), 3),
+    tertiary-md: (400, var(--apollo-color-font-tertiary), 2),
+    tertiary-sm: (400, var(--apollo-color-font-tertiary), 1),
+    /** Link */
+    link: (400, var(--apollo-color-font-link), 3),
+    link-md: (400, var(--apollo-color-font-link), 2),
+    link-sm: (400, var(--apollo-color-font-link), 1),
+    /** Statuses */
+    positive: (400, var(--apollo-color-status-positive-primary), 2),
+    negative: (400, var(--apollo-color-status-negative-primary), 2),
+    warning: (400, var(--apollo-color-status-warning-primary), 2),
+);
+
+@mixin text($style, $colorOverride: false, $weightOverride: false) {
+    @if not map.has-key($font-styles, $style) {
+        @error 'Unknown Apollo text style: #{$style}';
+    }
+
+    $font: map.get($font-styles, $style);
+    $weight: list.nth($font, 1);
+    $color: list.nth($font, 2);
+    $params: list.nth($font-sizes, list.nth($font, 3));
+
+    // Sass `or` returns a boolean, not the first truthy operand.
+    @if $weightOverride {
+        $weight: $weightOverride;
+    }
+
+    @if $colorOverride {
+        $color: $colorOverride;
+    }
+
+    font-weight: $weight;
+    font-style: normal;
+    font-family: var(--apollo-font-family-primary, #{fonts.$font-family-primary});
+    color: $color;
+    font-size: #{list.nth($params, 1)}px;
+    line-height: #{list.nth($params, 2)}px;
+
+    @if list.index(($fs-link, $fs-link-md, $fs-link-sm), $style) {
+        transition: color 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            color: var(--apollo-color-font-link-hover);
+        }
+    }
+}

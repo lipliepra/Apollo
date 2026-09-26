@@ -1,0 +1,35 @@
+@use '../src/scss/mixins/utils';
+@use '../src/scss/mixins/typography';
+
+body {
+    @include typography.text(typography.$fs-primary);
+    background: var(--apollo-color-background-primary);
+}
+
+.demo {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: grid;
+    gap: 24px;
+
+    @include utils.mediaMobile() {
+        padding: 24px 16px;
+    }
+}
+
+.demo-controls { display: flex; flex-wrap: wrap; gap: 24px; }
+.demo-controls select { font: inherit; }
+.demo-card {
+    background: var(--apollo-color-background-secondary);
+    border: 1px solid var(--apollo-color-border-primary);
+    border-radius: var(--apollo-border-radius-primary);
+}
+.demo-swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+.demo-swatch { height: 56px; margin-bottom: 12px; border-radius: 4px; }
+.demo-swatches code { font-size: 12px; }
+.demo-skeleton { @include utils.skeleton; height: 40px; max-width: 320px; }

@@ -1,0 +1,114 @@
+// Exclusive upper bounds: the mixins apply below these widths.
+$media-breakpoint-desktop: 1224px !default;
+$media-breakpoint-tablet: 1024px !default;
+$media-breakpoint-mobile: 768px !default;
+$media-breakpoint-extra-mobile: 523px !default;
+
+@mixin mediaDesktop() {
+    @media screen and (max-width: #{$media-breakpoint-desktop - 1px}) {
+        @content;
+    }
+}
+
+@mixin mediaTablet() {
+    @media screen and (max-width: #{$media-breakpoint-tablet - 1px}) {
+        @content;
+    }
+}
+
+@mixin mediaMobile() {
+    @media screen and (max-width: #{$media-breakpoint-mobile - 1px}) {
+        @content;
+    }
+}
+
+@mixin mediaExtraMobile() {
+    @media screen and (max-width: #{$media-breakpoint-extra-mobile - 1px}) {
+        @content;
+    }
+}
+
+@mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+// Requires the keyframes provided by scss/index.scss.
+@mixin skeleton {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--apollo-border-radius-primary);
+    background-color: var(--apollo-color-skeleton-primary);
+    box-sizing: border-box;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: 100%;
+        background-image: linear-gradient(90deg, var(--apollo-color-skeleton-primary) 0, var(--apollo-color-skeleton-secondary) 40px, var(--apollo-color-skeleton-primary) 80px);
+        animation: apollo-skeleton-animation 1s infinite linear;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
+    }
+}
+
+// Hiding the scrollbar is an explicit choice; scrolling remains available.
+@mixin hide-scrollbar {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+// Compatibility with existing SCSS callers during component migration.
+@mixin custom-scrollbar {
+    @include hide-scrollbar;
+}
+
+@mixin textEllipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    white-space: nowrap;
+}
+
+@mixin textBox($lineCamp) {
+    @include textEllipsis();
+    display: -webkit-box;
+    -webkit-line-clamp: $lineCamp;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+@mixin border-top-radius($radius: var(--apollo-border-radius-primary)) {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin border-right-radius($radius: var(--apollo-border-radius-primary)) {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius: var(--apollo-border-radius-primary)) {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+@mixin border-left-radius($radius: var(--apollo-border-radius-primary)) {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
