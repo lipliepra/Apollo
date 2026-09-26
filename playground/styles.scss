@@ -33,3 +33,7 @@ body {
 .demo-swatch { height: 56px; margin-bottom: 12px; border-radius: 4px; }
 .demo-swatches code { font-size: 12px; }
 .demo-skeleton { @include utils.skeleton; height: 40px; max-width: 320px; }
+
+.demo-fonts { display: grid; gap: 16px; }
+.demo-font-primary { font-family: var(--apollo-font-family-primary); }
+.demo-font-secondary { font-family: var(--apollo-font-family-secondary); }

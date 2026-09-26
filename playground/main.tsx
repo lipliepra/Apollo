@@ -32,9 +32,16 @@ createRoot(document.getElementById('root')!).render(
             </div>
             <section className="demo-card apollo-p-16 apollo-rich-text">
                 <h2>Типографика и отступы</h2>
-                <p>Текст карточки использует Apollo. Шрифты пока берутся из системы.</p>
+                <p>Текст карточки использует Gilroy из пакета Apollo.</p>
                 <p><a href="#tokens">Ссылка на палитру</a></p>
                 <ul><li>Адаптивные заголовки</li><li>Общие CSS-переменные</li></ul>
+            </section>
+            <section className="demo-card apollo-p-16 demo-fonts" aria-label="Шрифты">
+                <h2>Шрифты</h2>
+                <p className="demo-font-primary">Gilroy · Съешь ещё этих мягких французских булок · 0123456789</p>
+                <p className="demo-font-primary"><strong>Gilroy Bold · Apollo · Аполло · 0123456789</strong></p>
+                <p className="demo-font-secondary">Inter · Съешь ещё этих мягких французских булок · 0123456789</p>
+                <p className="demo-font-secondary"><strong>Inter Bold · Apollo · Аполло · 0123456789</strong></p>
             </section>
             <section id="tokens" className="demo-swatches" aria-label="Палитра">
                 {['--apollo-brand', '--apollo-color-font-primary', '--apollo-color-status-positive-primary', '--apollo-color-status-negative-primary'].map((token) => (

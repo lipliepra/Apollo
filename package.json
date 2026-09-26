@@ -16,6 +16,10 @@
             "import": "./dist/index.js"
         },
         "./styles.css": "./dist/styles.css",
+        "./fonts.css": "./dist/fonts.css",
+        "./fonts/Gilroy-Medium.woff2": "./dist/assets/fonts/Gilroy/Gilroy-Medium.woff2",
+        "./fonts/Gilroy-Bold.woff2": "./dist/assets/fonts/Gilroy/Gilroy-Bold.woff2",
+        "./fonts/InterVariable.woff2": "./dist/assets/fonts/Inter/InterVariable.woff2",
         "./reset.css": "./dist/reset.css",
         "./scss": "./dist/scss/index.scss",
         "./scss/mixins/utils": "./dist/scss/mixins/_utils.scss",
